@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum ItemType{cassette, thing};
+public enum ItemType{cassette, key, thing};
 public class Item
 {
 	private string name;

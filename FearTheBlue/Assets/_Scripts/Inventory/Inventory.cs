@@ -7,6 +7,7 @@ public class Inventory : MonoBehaviour
 	private Dictionary <ItemType,List<Item>> inventory = new Dictionary<ItemType,List<Item>>();
 	public Dictionary <ItemType, List<Item>> Inventroy{get{return inventory;}}
 
+	/*
 	private void Awake()
 	{
 		Item cas1 = new Item ("cassette1", ItemType.cassette);
@@ -14,6 +15,7 @@ public class Inventory : MonoBehaviour
 		AddItem (cas1);
 		AddItem (cas2);
 	}
+	*/
 
 	public void AddItem (Item item)
 	{
@@ -65,6 +67,21 @@ public class Inventory : MonoBehaviour
 		if (!inventory.ContainsKey (type))
 			return null;
 		return inventory[type];
+	}
+
+	public Item getItem(ItemType type, string name)
+	{
+		if (!inventory.ContainsKey (type))
+			return null;
+
+		for (int i = 0; i < inventory [type].Count; i++)
+		{
+			if (inventory [type] [i].Name == name)
+			{
+				return inventory [type] [i];
+			}
+		}
+		return null;
 	}
 
 	public int getAmountOfItems(ItemType type, string name)
