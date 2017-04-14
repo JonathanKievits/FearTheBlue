@@ -10,7 +10,7 @@ public class ObjectOutlining : MonoBehaviour
 	{
 		//Material newMat = new Material (out);
 		renderer.material.shader = outlineShader;
-		renderer.material.mainTexture = renderer.material.mainTexture;
+		//renderer.material.mainTexture = renderer.material.mainTexture;
 		renderer.material.SetFloat ("_Outline", outlineWidth);
 		renderer.material.SetColor ("_Color", Color.white);
 		renderer.material.SetColor ("_OutlineColor", Color.yellow);
