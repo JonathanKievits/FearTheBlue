@@ -40,7 +40,7 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 velocity = movement.normalized * speed * Time.fixedDeltaTime;
+        Vector3 velocity = transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.position + velocity);
     }
 }

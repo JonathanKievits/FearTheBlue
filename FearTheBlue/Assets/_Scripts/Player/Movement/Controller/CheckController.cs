@@ -8,7 +8,7 @@ public class CheckController : MonoBehaviour
     {
         var joysticks = Input.GetJoystickNames()[0].ToLower();
         var os = System.Environment.OSVersion.Platform.ToString().ToLower();
-        
+        print(joysticks);
         if (os == "unix")
         {
             if (joysticks.Contains("sony"))
@@ -26,7 +26,7 @@ public class CheckController : MonoBehaviour
 
         if (os == "win32nt")
         {
-            if (joysticks.Contains("sony"))
+            if (joysticks.Contains("wireless controller"))
             {
                 Controller.setController(ControllerType.playstation, Os.windows);
                 return;

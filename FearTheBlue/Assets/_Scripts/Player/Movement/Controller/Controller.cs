@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 public enum ControllerType { xbox, playstation };
 public enum Os { windows, mac };
+
+/// <summary>
+/// Dit script pakt de input van de controller
+/// </summary>
 public class Controller
 {
     private static string triangle = "";
