@@ -3,24 +3,34 @@ using System.Collections;
 
 public class RotatePuzzle : PuzzleBase 
 {
-	[SerializeField]private float maxOffset;
-	[SerializeField]private Transform cube;
+	[SerializeField]private Transform objectToRotate;
 	[SerializeField]private Transform safeDoor;
-	private float yRotation;
-	private float zRotation;
+	[SerializeField]private float maxOffset;
+	[SerializeField]private float correctY;
+	[SerializeField]private float correctX;
+	private PillarLogic pillarLogic;
+	private RotateObject rotateObject;
 	private bool yOkay;
 	private bool zOkay;
 
+	protected override void Start()
+	{
+		base.Start ();
+		pillarLogic = FindObjectOfType<PillarLogic> ();
+		rotateObject = objectToRotate.gameObject.GetComponent<RotateObject> ();
+	}
+
 	public override void startPuzzle ()
 	{
-		yRotation = 80;
-		zRotation = 50;
+		yOkay = false;
 	}
 
 	protected override void onSolve()
 	{
-		print ("CORRECT!");
 		StartCoroutine ("openDoor");
+		pillarLogic.disableCube ();
+		pillarLogic.enabled = false;
+		rotateObject.enabled = false;
 		manager.exitState ();
 	}
 
@@ -30,7 +40,6 @@ public class RotatePuzzle : PuzzleBase
 		{
 			safeDoor.transform.localEulerAngles -= new Vector3 (0,1,0);
 			yield return new WaitForSeconds (0.01f);
-			//print (safeDoor.transform.eulerAngles.y);
 		}
 	}
 
@@ -38,10 +47,10 @@ public class RotatePuzzle : PuzzleBase
 	{
 		yOkay = false;
 		zOkay = false;
-		if(System.Math.Abs(cube.localEulerAngles.y - yRotation) <= maxOffset)
+		if(System.Math.Abs(objectToRotate.localEulerAngles.y - correctY) <= maxOffset)
 			yOkay = true;
 
-		if (System.Math.Abs (cube.localEulerAngles.z - zRotation) <= maxOffset)
+		if (System.Math.Abs (objectToRotate.localEulerAngles.z - correctX) <= maxOffset)
 			zOkay = true;
 
 		if (yOkay && zOkay)

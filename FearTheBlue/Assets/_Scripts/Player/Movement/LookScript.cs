@@ -17,7 +17,7 @@ public class LookScript : MonoBehaviour
 		var x = Input.GetAxisRaw (Controller.RightStickX);
 		var y = Input.GetAxisRaw (Controller.RightStickY);
 		var tjoep = new Vector3 (x, 0, 0);
-		this.transform.eulerAngles += tjoep.normalized*multiplier;
+		this.transform.localEulerAngles += tjoep.normalized*multiplier;
 		player.transform.localEulerAngles += new Vector3 (0, y, 0).normalized*multiplier;
 	}
 }

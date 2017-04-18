@@ -3,7 +3,7 @@
 public abstract class PuzzleBase : MonoBehaviour
 {
 	protected PuzzleManager manager;
-	protected void Start()
+	protected virtual void Start()
 	{
 		manager = this.GetComponent<PuzzleManager> ();
 	}
