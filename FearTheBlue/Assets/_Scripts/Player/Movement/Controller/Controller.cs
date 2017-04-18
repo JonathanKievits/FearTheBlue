@@ -6,7 +6,7 @@ public class Controller
     private static string triangle = "";
     public static string Triangle { get { return triangle; } }
     private static string square = "";
-    private static string Square { get { return square; } }
+	public static string Square { get { return square; } }
     private static string cross = "";
     public static string Cross { get { return cross; } }
     private static string circle = "";
