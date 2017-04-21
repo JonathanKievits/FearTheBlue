@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: d400795463c855e42bc91aa5ee46f6bc
+timeCreated: 1491557651
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: buizen_group5_pCube5
+    100002: buizen_group5_pCube6
+    100004: buizen_group6_pCube2
+    100006: buizen_group6_pCube3
+    100008: buizen_pCube1_group6
+    100010: buizen_pCube4_group5
+    100012: gloeilamp
+    100014: group4_buizen_pCube5
+    100016: group4_buizen_pCube6
+    100018: kap
+    100020: //RootNode
+    100022: pCube4_group4_buizen
+    100024: pot
+    100026: pTorus1
+    400000: buizen_group5_pCube5
+    400002: buizen_group5_pCube6
+    400004: buizen_group6_pCube2
+    400006: buizen_group6_pCube3
+    400008: buizen_pCube1_group6
+    400010: buizen_pCube4_group5
+    400012: gloeilamp
+    400014: group4_buizen_pCube5
+    400016: group4_buizen_pCube6
+    400018: kap
+    400020: //RootNode
+    400022: pCube4_group4_buizen
+    400024: pot
+    400026: pTorus1
+    2300000: buizen_group5_pCube5
+    2300002: buizen_group5_pCube6
+    2300004: buizen_group6_pCube2
+    2300006: buizen_group6_pCube3
+    2300008: buizen_pCube1_group6
+    2300010: buizen_pCube4_group5
+    2300012: gloeilamp
+    2300014: group4_buizen_pCube5
+    2300016: group4_buizen_pCube6
+    2300018: kap
+    2300020: pCube4_group4_buizen
+    2300022: pot
+    2300024: pTorus1
+    3300000: buizen_group5_pCube5
+    3300002: buizen_group5_pCube6
+    3300004: buizen_group6_pCube2
+    3300006: buizen_group6_pCube3
+    3300008: buizen_pCube1_group6
+    3300010: buizen_pCube4_group5
+    3300012: gloeilamp
+    3300014: group4_buizen_pCube5
+    3300016: group4_buizen_pCube6
+    3300018: kap
+    3300020: pCube4_group4_buizen
+    3300022: pot
+    3300024: pTorus1
+    4300000: buizen_group5_pCube5
+    4300002: buizen_group5_pCube6
+    4300004: buizen_group6_pCube2
+    4300006: buizen_group6_pCube3
+    4300008: buizen_pCube1_group6
+    4300010: buizen_pCube4_group5
+    4300012: gloeilamp
+    4300014: group4_buizen_pCube5
+    4300016: group4_buizen_pCube6
+    4300018: kap
+    4300020: pCube4_group4_buizen
+    4300022: pot
+    4300024: pTorus1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
