@@ -5,6 +5,7 @@ public class RotatePuzzle : PuzzleBase
 {
 	[SerializeField]private Transform objectToRotate;
 	[SerializeField]private Transform safeDoor;
+	[SerializeField]private GameObject key;
 	[SerializeField]private float maxOffset;
 	[SerializeField]private float correctY;
 	[SerializeField]private float correctX;
@@ -16,6 +17,7 @@ public class RotatePuzzle : PuzzleBase
 	protected override void Start()
 	{
 		base.Start ();
+		key.SetActive (false);
 		pillarLogic = FindObjectOfType<PillarLogic> ();
 		rotateObject = objectToRotate.gameObject.GetComponent<RotateObject> ();
 	}
@@ -31,6 +33,7 @@ public class RotatePuzzle : PuzzleBase
 		pillarLogic.disableCube ();
 		pillarLogic.enabled = false;
 		rotateObject.enabled = false;
+		key.SetActive (true);
 		manager.exitState ();
 	}
 

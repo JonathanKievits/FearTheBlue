@@ -1,18 +1,19 @@
-﻿	using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Movement : MonoBehaviour 
 {
-	[Range(5,20)]
-	[SerializeField]private float speed;
+	[Range(1, 5)][SerializeField]private float speed;
 	private Rigidbody rigid;
 	private Vector3 movement;
+	//private AudioManager audio;
 
 	private void Start()
 	{
 		rigid = GetComponent<Rigidbody> ();
+		//audio = FindObjectOfType<AudioManager> ();
 	}
 
 	private void Update()

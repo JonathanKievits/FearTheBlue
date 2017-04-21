@@ -7,7 +7,7 @@ public class PickupLogic : MonoBehaviour
 	[SerializeField]private string name;
 	[Range(0,0.5f)][SerializeField]private float outlineWidth;
 	public string Name{get{return name;}}
-	[Range(5,20)][SerializeField]private float maxDistance;	
+	[Range(1,5)][SerializeField]private float maxDistance;	
 	private GameObject player;
 	private Item item;
 	private Inventory inventory;
@@ -46,7 +46,7 @@ public class PickupLogic : MonoBehaviour
 			this.isOutlined = !this.isOutlined;
 		}
 
-		if (Input.GetButtonDown(Controller.Cross))
+		if (distance <= maxDistance && Input.GetButtonDown(Controller.Cross))
 		{
 			inventory.AddItem (item);
 			Destroy (this.gameObject);
