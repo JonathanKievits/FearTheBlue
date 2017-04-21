@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: b514929b0abf0a6459fb9f30b03b3873
+timeCreated: 1492766994
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: blaadjes
+    100002: blaadjes1
+    100004: blaadjes10
+    100006: blaadjes11
+    100008: blaadjes12
+    100010: blaadjes13
+    100012: blaadjes14
+    100014: blaadjes15
+    100016: blaadjes16
+    100018: blaadjes17
+    100020: blaadjes18
+    100022: blaadjes19
+    100024: blaadjes2
+    100026: blaadjes20
+    100028: blaadjes21
+    100030: blaadjes22
+    100032: blaadjes23
+    100034: blaadjes24
+    100036: blaadjes25
+    100038: blaadjes26
+    100040: blaadjes27
+    100042: blaadjes3
+    100044: blaadjes4
+    100046: blaadjes5
+    100048: blaadjes6
+    100050: blaadjes7
+    100052: blaadjes8
+    100054: blaadjes9
+    100056: blad
+    100058: blad 1
+    100060: blad 10
+    100062: blad 11
+    100064: blad 12
+    100066: blad 13
+    100068: blad 14
+    100070: blad 15
+    100072: blad 16
+    100074: blad 17
+    100076: blad 18
+    100078: blad 19
+    100080: blad 2
+    100082: blad 20
+    100084: blad 21
+    100086: blad 22
+    100088: blad 23
+    100090: blad 3
+    100092: blad 4
+    100094: blad 5
+    100096: blad 6
+    100098: blad 7
+    100100: blad 8
+    100102: blad 9
+    100104: blad1
+    100106: blad1 1
+    100108: blad1 10
+    100110: blad1 11
+    100112: blad1 12
+    100114: blad1 13
+    100116: blad1 14
+    100118: blad1 15
+    100120: blad1 16
+    100122: blad1 17
+    100124: blad1 18
+    100126: blad1 19
+    100128: blad1 2
+    100130: blad1 20
+    100132: blad1 21
+    100134: blad1 22
+    100136: blad1 23
+    100138: blad1 3
+    100140: blad1 4
+    100142: blad1 5
+    100144: blad1 6
+    100146: blad1 7
+    100148: blad1 8
+    100150: blad1 9
+    100152: blad10
+    100154: blad10 1
+    100156: blad11
+    100158: blad11 1
+    100160: blad12
+    100162: blad12 1
+    100164: blad12 2
+    100166: blad12 3
+    100168: blad13
+    100170: blad13 1
+    100172: blad13 2
+    100174: blad13 3
+    100176: blad14
+    100178: blad14 1
+    100180: blad2
+    100182: blad2 1
+    100184: blad2 10
+    100186: blad2 11
+    100188: blad2 12
+    100190: blad2 13
+    100192: blad2 14
+    100194: blad2 15
+    100196: blad2 16
+    100198: blad2 17
+    100200: blad2 18
+    100202: blad2 19
+    100204: blad2 2
+    100206: blad2 20
+    100208: blad2 21
+    100210: blad2 22
+    100212: blad2 23
+    100214: blad2 24
+    100216: blad2 25
+    100218: blad2 26
+    100220: blad2 27
+    100222: blad2 3
+    100224: blad2 4
+    100226: blad2 5
+    100228: blad2 6
+    100230: blad2 7
+    100232: blad2 8
+    100234: blad2 9
+    100236: blad3
+    100238: blad3 1
+    100240: blad3 10
+    100242: blad3 11
+    100244: blad3 12
+    100246: blad3 13
+    100248: blad3 14
+    100250: blad3 15
+    100252: blad3 16
+    100254: blad3 17
+    100256: blad3 18
+    100258: blad3 19
+    100260: blad3 2
+    100262: blad3 20
+    100264: blad3 21
+    100266: blad3 22
+    100268: blad3 23
+    100270: blad3 24
+    100272: blad3 25
+    100274: blad3 26
+    100276: blad3 27
+    100278: blad3 3
+    100280: blad3 4
+    100282: blad3 5
+    100284: blad3 6
+    100286: blad3 7
+    100288: blad3 8
+    100290: blad3 9
+    100292: blad4
+    100294: blad4 1
+    100296: blad4 10
+    100298: blad4 11
+    100300: blad4 12
+    100302: blad4 13
+    100304: blad4 14
+    100306: blad4 15
+    100308: blad4 16
+    100310: blad4 17
+    100312: blad4 18
+    100314: blad4 19
+    100316: blad4 2
+    100318: blad4 20
+    100320: blad4 21
+    100322: blad4 22
+    100324: blad4 23
+    100326: blad4 24
+    100328: blad4 25
+    100330: blad4 26
+    100332: blad4 27
+    100334: blad4 3
+    100336: blad4 4
+    100338: blad4 5
+    100340: blad4 6
+    100342: blad4 7
+    100344: blad4 8
+    100346: blad4 9
+    100348: blad5
+    100350: blad5 1
+    100352: blad5 10
+    100354: blad5 11
+    100356: blad5 12
+    100358: blad5 13
+    100360: blad5 14
+    100362: blad5 15
+    100364: blad5 16
+    100366: blad5 17
+    100368: blad5 18
+    100370: blad5 19
+    100372: blad5 2
+    100374: blad5 20
+    100376: blad5 21
+    100378: blad5 22
+    100380: blad5 23
+    100382: blad5 24
+    100384: blad5 25
+    100386: blad5 26
+    100388: blad5 27
+    100390: blad5 3
+    100392: blad5 4
+    100394: blad5 5
+    100396: blad5 6
+    100398: blad5 7
+    100400: blad5 8
+    100402: blad5 9
+    100404: blad6
+    100406: blad6 1
+    100408: blad6 10
+    100410: blad6 11
+    100412: blad6 12
+    100414: blad6 13
+    100416: blad6 14
+    100418: blad6 15
+    100420: blad6 16
+    100422: blad6 17
+    100424: blad6 18
+    100426: blad6 19
+    100428: blad6 2
+    100430: blad6 20
+    100432: blad6 21
+    100434: blad6 22
+    100436: blad6 23
+    100438: blad6 24
+    100440: blad6 25
+    100442: blad6 26
+    100444: blad6 27
+    100446: blad6 3
+    100448: blad6 4
+    100450: blad6 5
+    100452: blad6 6
+    100454: blad6 7
+    100456: blad6 8
+    100458: blad6 9
+    100460: blad7
+    100462: blad7 1
+    100464: blad7 10
+    100466: blad7 11
+    100468: blad7 12
+    100470: blad7 13
+    100472: blad7 14
+    100474: blad7 15
+    100476: blad7 16
+    100478: blad7 17
+    100480: blad7 18
+    100482: blad7 19
+    100484: blad7 2
+    100486: blad7 20
+    100488: blad7 21
+    100490: blad7 22
+    100492: blad7 23
+    100494: blad7 24
+    100496: blad7 25
+    100498: blad7 26
+    100500: blad7 27
+    100502: blad7 3
+    100504: blad7 4
+    100506: blad7 5
+    100508: blad7 6
+    100510: blad7 7
+    100512: blad7 8
+    100514: blad7 9
+    100516: blad8
+    100518: blad8 1
+    100520: blad9
+    100522: blad9 1
+    100524: group1
+    100526: pot
+    100528: //RootNode
+    400000: blaadjes
+    400002: blaadjes1
+    400004: blaadjes10
+    400006: blaadjes11
+    400008: blaadjes12
+    400010: blaadjes13
+    400012: blaadjes14
+    400014: blaadjes15
+    400016: blaadjes16
+    400018: blaadjes17
+    400020: blaadjes18
+    400022: blaadjes19
+    400024: blaadjes2
+    400026: blaadjes20
+    400028: blaadjes21
+    400030: blaadjes22
+    400032: blaadjes23
+    400034: blaadjes24
+    400036: blaadjes25
+    400038: blaadjes26
+    400040: blaadjes27
+    400042: blaadjes3
+    400044: blaadjes4
+    400046: blaadjes5
+    400048: blaadjes6
+    400050: blaadjes7
+    400052: blaadjes8
+    400054: blaadjes9
+    400056: blad
+    400058: blad 1
+    400060: blad 10
+    400062: blad 11
+    400064: blad 12
+    400066: blad 13
+    400068: blad 14
+    400070: blad 15
+    400072: blad 16
+    400074: blad 17
+    400076: blad 18
+    400078: blad 19
+    400080: blad 2
+    400082: blad 20
+    400084: blad 21
+    400086: blad 22
+    400088: blad 23
+    400090: blad 3
+    400092: blad 4
+    400094: blad 5
+    400096: blad 6
+    400098: blad 7
+    400100: blad 8
+    400102: blad 9
+    400104: blad1
+    400106: blad1 1
+    400108: blad1 10
+    400110: blad1 11
+    400112: blad1 12
+    400114: blad1 13
+    400116: blad1 14
+    400118: blad1 15
+    400120: blad1 16
+    400122: blad1 17
+    400124: blad1 18
+    400126: blad1 19
+    400128: blad1 2
+    400130: blad1 20
+    400132: blad1 21
+    400134: blad1 22
+    400136: blad1 23
+    400138: blad1 3
+    400140: blad1 4
+    400142: blad1 5
+    400144: blad1 6
+    400146: blad1 7
+    400148: blad1 8
+    400150: blad1 9
+    400152: blad10
+    400154: blad10 1
+    400156: blad11
+    400158: blad11 1
+    400160: blad12
+    400162: blad12 1
+    400164: blad12 2
+    400166: blad12 3
+    400168: blad13
+    400170: blad13 1
+    400172: blad13 2
+    400174: blad13 3
+    400176: blad14
+    400178: blad14 1
+    400180: blad2
+    400182: blad2 1
+    400184: blad2 10
+    400186: blad2 11
+    400188: blad2 12
+    400190: blad2 13
+    400192: blad2 14
+    400194: blad2 15
+    400196: blad2 16
+    400198: blad2 17
+    400200: blad2 18
+    400202: blad2 19
+    400204: blad2 2
+    400206: blad2 20
+    400208: blad2 21
+    400210: blad2 22
+    400212: blad2 23
+    400214: blad2 24
+    400216: blad2 25
+    400218: blad2 26
+    400220: blad2 27
+    400222: blad2 3
+    400224: blad2 4
+    400226: blad2 5
+    400228: blad2 6
+    400230: blad2 7
+    400232: blad2 8
+    400234: blad2 9
+    400236: blad3
+    400238: blad3 1
+    400240: blad3 10
+    400242: blad3 11
+    400244: blad3 12
+    400246: blad3 13
+    400248: blad3 14
+    400250: blad3 15
+    400252: blad3 16
+    400254: blad3 17
+    400256: blad3 18
+    400258: blad3 19
+    400260: blad3 2
+    400262: blad3 20
+    400264: blad3 21
+    400266: blad3 22
+    400268: blad3 23
+    400270: blad3 24
+    400272: blad3 25
+    400274: blad3 26
+    400276: blad3 27
+    400278: blad3 3
+    400280: blad3 4
+    400282: blad3 5
+    400284: blad3 6
+    400286: blad3 7
+    400288: blad3 8
+    400290: blad3 9
+    400292: blad4
+    400294: blad4 1
+    400296: blad4 10
+    400298: blad4 11
+    400300: blad4 12
+    400302: blad4 13
+    400304: blad4 14
+    400306: blad4 15
+    400308: blad4 16
+    400310: blad4 17
+    400312: blad4 18
+    400314: blad4 19
+    400316: blad4 2
+    400318: blad4 20
+    400320: blad4 21
+    400322: blad4 22
+    400324: blad4 23
+    400326: blad4 24
+    400328: blad4 25
+    400330: blad4 26
+    400332: blad4 27
+    400334: blad4 3
+    400336: blad4 4
+    400338: blad4 5
+    400340: blad4 6
+    400342: blad4 7
+    400344: blad4 8
+    400346: blad4 9
+    400348: blad5
+    400350: blad5 1
+    400352: blad5 10
+    400354: blad5 11
+    400356: blad5 12
+    400358: blad5 13
+    400360: blad5 14
+    400362: blad5 15
+    400364: blad5 16
+    400366: blad5 17
+    400368: blad5 18
+    400370: blad5 19
+    400372: blad5 2
+    400374: blad5 20
+    400376: blad5 21
+    400378: blad5 22
+    400380: blad5 23
+    400382: blad5 24
+    400384: blad5 25
+    400386: blad5 26
+    400388: blad5 27
+    400390: blad5 3
+    400392: blad5 4
+    400394: blad5 5
+    400396: blad5 6
+    400398: blad5 7
+    400400: blad5 8
+    400402: blad5 9
+    400404: blad6
+    400406: blad6 1
+    400408: blad6 10
+    400410: blad6 11
+    400412: blad6 12
+    400414: blad6 13
+    400416: blad6 14
+    400418: blad6 15
+    400420: blad6 16
+    400422: blad6 17
+    400424: blad6 18
+    400426: blad6 19
+    400428: blad6 2
+    400430: blad6 20
+    400432: blad6 21
+    400434: blad6 22
+    400436: blad6 23
+    400438: blad6 24
+    400440: blad6 25
+    400442: blad6 26
+    400444: blad6 27
+    400446: blad6 3
+    400448: blad6 4
+    400450: blad6 5
+    400452: blad6 6
+    400454: blad6 7
+    400456: blad6 8
+    400458: blad6 9
+    400460: blad7
+    400462: blad7 1
+    400464: blad7 10
+    400466: blad7 11
+    400468: blad7 12
+    400470: blad7 13
+    400472: blad7 14
+    400474: blad7 15
+    400476: blad7 16
+    400478: blad7 17
+    400480: blad7 18
+    400482: blad7 19
+    400484: blad7 2
+    400486: blad7 20
+    400488: blad7 21
+    400490: blad7 22
+    400492: blad7 23
+    400494: blad7 24
+    400496: blad7 25
+    400498: blad7 26
+    400500: blad7 27
+    400502: blad7 3
+    400504: blad7 4
+    400506: blad7 5
+    400508: blad7 6
+    400510: blad7 7
+    400512: blad7 8
+    400514: blad7 9
+    400516: blad8
+    400518: blad8 1
+    400520: blad9
+    400522: blad9 1
+    400524: group1
+    400526: pot
+    400528: //RootNode
+    2300000: blad
+    2300002: blad 1
+    2300004: blad 10
+    2300006: blad 11
+    2300008: blad 12
+    2300010: blad 13
+    2300012: blad 14
+    2300014: blad 15
+    2300016: blad 16
+    2300018: blad 17
+    2300020: blad 18
+    2300022: blad 19
+    2300024: blad 2
+    2300026: blad 20
+    2300028: blad 21
+    2300030: blad 22
+    2300032: blad 23
+    2300034: blad 3
+    2300036: blad 4
+    2300038: blad 5
+    2300040: blad 6
+    2300042: blad 7
+    2300044: blad 8
+    2300046: blad 9
+    2300048: blad1
+    2300050: blad1 1
+    2300052: blad1 10
+    2300054: blad1 11
+    2300056: blad1 12
+    2300058: blad1 13
+    2300060: blad1 14
+    2300062: blad1 15
+    2300064: blad1 16
+    2300066: blad1 17
+    2300068: blad1 18
+    2300070: blad1 19
+    2300072: blad1 2
+    2300074: blad1 20
+    2300076: blad1 21
+    2300078: blad1 22
+    2300080: blad1 23
+    2300082: blad1 3
+    2300084: blad1 4
+    2300086: blad1 5
+    2300088: blad1 6
+    2300090: blad1 7
+    2300092: blad1 8
+    2300094: blad1 9
+    2300096: blad10
+    2300098: blad10 1
+    2300100: blad11
+    2300102: blad11 1
+    2300104: blad12
+    2300106: blad12 1
+    2300108: blad12 2
+    2300110: blad12 3
+    2300112: blad13
+    2300114: blad13 1
+    2300116: blad13 2
+    2300118: blad13 3
+    2300120: blad14
+    2300122: blad14 1
+    2300124: blad2
+    2300126: blad2 1
+    2300128: blad2 10
+    2300130: blad2 11
+    2300132: blad2 12
+    2300134: blad2 13
+    2300136: blad2 14
+    2300138: blad2 15
+    2300140: blad2 16
+    2300142: blad2 17
+    2300144: blad2 18
+    2300146: blad2 19
+    2300148: blad2 2
+    2300150: blad2 20
+    2300152: blad2 21
+    2300154: blad2 22
+    2300156: blad2 23
+    2300158: blad2 24
+    2300160: blad2 25
+    2300162: blad2 26
+    2300164: blad2 27
+    2300166: blad2 3
+    2300168: blad2 4
+    2300170: blad2 5
+    2300172: blad2 6
+    2300174: blad2 7
+    2300176: blad2 8
+    2300178: blad2 9
+    2300180: blad3
+    2300182: blad3 1
+    2300184: blad3 10
+    2300186: blad3 11
+    2300188: blad3 12
+    2300190: blad3 13
+    2300192: blad3 14
+    2300194: blad3 15
+    2300196: blad3 16
+    2300198: blad3 17
+    2300200: blad3 18
+    2300202: blad3 19
+    2300204: blad3 2
+    2300206: blad3 20
+    2300208: blad3 21
+    2300210: blad3 22
+    2300212: blad3 23
+    2300214: blad3 24
+    2300216: blad3 25
+    2300218: blad3 26
+    2300220: blad3 27
+    2300222: blad3 3
+    2300224: blad3 4
+    2300226: blad3 5
+    2300228: blad3 6
+    2300230: blad3 7
+    2300232: blad3 8
+    2300234: blad3 9
+    2300236: blad4
+    2300238: blad4 1
+    2300240: blad4 10
+    2300242: blad4 11
+    2300244: blad4 12
+    2300246: blad4 13
+    2300248: blad4 14
+    2300250: blad4 15
+    2300252: blad4 16
+    2300254: blad4 17
+    2300256: blad4 18
+    2300258: blad4 19
+    2300260: blad4 2
+    2300262: blad4 20
+    2300264: blad4 21
+    2300266: blad4 22
+    2300268: blad4 23
+    2300270: blad4 24
+    2300272: blad4 25
+    2300274: blad4 26
+    2300276: blad4 27
+    2300278: blad4 3
+    2300280: blad4 4
+    2300282: blad4 5
+    2300284: blad4 6
+    2300286: blad4 7
+    2300288: blad4 8
+    2300290: blad4 9
+    2300292: blad5
+    2300294: blad5 1
+    2300296: blad5 10
+    2300298: blad5 11
+    2300300: blad5 12
+    2300302: blad5 13
+    2300304: blad5 14
+    2300306: blad5 15
+    2300308: blad5 16
+    2300310: blad5 17
+    2300312: blad5 18
+    2300314: blad5 19
+    2300316: blad5 2
+    2300318: blad5 20
+    2300320: blad5 21
+    2300322: blad5 22
+    2300324: blad5 23
+    2300326: blad5 24
+    2300328: blad5 25
+    2300330: blad5 26
+    2300332: blad5 27
+    2300334: blad5 3
+    2300336: blad5 4
+    2300338: blad5 5
+    2300340: blad5 6
+    2300342: blad5 7
+    2300344: blad5 8
+    2300346: blad5 9
+    2300348: blad6
+    2300350: blad6 1
+    2300352: blad6 10
+    2300354: blad6 11
+    2300356: blad6 12
+    2300358: blad6 13
+    2300360: blad6 14
+    2300362: blad6 15
+    2300364: blad6 16
+    2300366: blad6 17
+    2300368: blad6 18
+    2300370: blad6 19
+    2300372: blad6 2
+    2300374: blad6 20
+    2300376: blad6 21
+    2300378: blad6 22
+    2300380: blad6 23
+    2300382: blad6 24
+    2300384: blad6 25
+    2300386: blad6 26
+    2300388: blad6 27
+    2300390: blad6 3
+    2300392: blad6 4
+    2300394: blad6 5
+    2300396: blad6 6
+    2300398: blad6 7
+    2300400: blad6 8
+    2300402: blad6 9
+    2300404: blad7
+    2300406: blad7 1
+    2300408: blad7 10
+    2300410: blad7 11
+    2300412: blad7 12
+    2300414: blad7 13
+    2300416: blad7 14
+    2300418: blad7 15
+    2300420: blad7 16
+    2300422: blad7 17
+    2300424: blad7 18
+    2300426: blad7 19
+    2300428: blad7 2
+    2300430: blad7 20
+    2300432: blad7 21
+    2300434: blad7 22
+    2300436: blad7 23
+    2300438: blad7 24
+    2300440: blad7 25
+    2300442: blad7 26
+    2300444: blad7 27
+    2300446: blad7 3
+    2300448: blad7 4
+    2300450: blad7 5
+    2300452: blad7 6
+    2300454: blad7 7
+    2300456: blad7 8
+    2300458: blad7 9
+    2300460: blad8
+    2300462: blad8 1
+    2300464: blad9
+    2300466: blad9 1
+    2300468: pot
+    3300000: blad
+    3300002: blad 1
+    3300004: blad 10
+    3300006: blad 11
+    3300008: blad 12
+    3300010: blad 13
+    3300012: blad 14
+    3300014: blad 15
+    3300016: blad 16
+    3300018: blad 17
+    3300020: blad 18
+    3300022: blad 19
+    3300024: blad 2
+    3300026: blad 20
+    3300028: blad 21
+    3300030: blad 22
+    3300032: blad 23
+    3300034: blad 3
+    3300036: blad 4
+    3300038: blad 5
+    3300040: blad 6
+    3300042: blad 7
+    3300044: blad 8
+    3300046: blad 9
+    3300048: blad1
+    3300050: blad1 1
+    3300052: blad1 10
+    3300054: blad1 11
+    3300056: blad1 12
+    3300058: blad1 13
+    3300060: blad1 14
+    3300062: blad1 15
+    3300064: blad1 16
+    3300066: blad1 17
+    3300068: blad1 18
+    3300070: blad1 19
+    3300072: blad1 2
+    3300074: blad1 20
+    3300076: blad1 21
+    3300078: blad1 22
+    3300080: blad1 23
+    3300082: blad1 3
+    3300084: blad1 4
+    3300086: blad1 5
+    3300088: blad1 6
+    3300090: blad1 7
+    3300092: blad1 8
+    3300094: blad1 9
+    3300096: blad10
+    3300098: blad10 1
+    3300100: blad11
+    3300102: blad11 1
+    3300104: blad12
+    3300106: blad12 1
+    3300108: blad12 2
+    3300110: blad12 3
+    3300112: blad13
+    3300114: blad13 1
+    3300116: blad13 2
+    3300118: blad13 3
+    3300120: blad14
+    3300122: blad14 1
+    3300124: blad2
+    3300126: blad2 1
+    3300128: blad2 10
+    3300130: blad2 11
+    3300132: blad2 12
+    3300134: blad2 13
+    3300136: blad2 14
+    3300138: blad2 15
+    3300140: blad2 16
+    3300142: blad2 17
+    3300144: blad2 18
+    3300146: blad2 19
+    3300148: blad2 2
+    3300150: blad2 20
+    3300152: blad2 21
+    3300154: blad2 22
+    3300156: blad2 23
+    3300158: blad2 24
+    3300160: blad2 25
+    3300162: blad2 26
+    3300164: blad2 27
+    3300166: blad2 3
+    3300168: blad2 4
+    3300170: blad2 5
+    3300172: blad2 6
+    3300174: blad2 7
+    3300176: blad2 8
+    3300178: blad2 9
+    3300180: blad3
+    3300182: blad3 1
+    3300184: blad3 10
+    3300186: blad3 11
+    3300188: blad3 12
+    3300190: blad3 13
+    3300192: blad3 14
+    3300194: blad3 15
+    3300196: blad3 16
+    3300198: blad3 17
+    3300200: blad3 18
+    3300202: blad3 19
+    3300204: blad3 2
+    3300206: blad3 20
+    3300208: blad3 21
+    3300210: blad3 22
+    3300212: blad3 23
+    3300214: blad3 24
+    3300216: blad3 25
+    3300218: blad3 26
+    3300220: blad3 27
+    3300222: blad3 3
+    3300224: blad3 4
+    3300226: blad3 5
+    3300228: blad3 6
+    3300230: blad3 7
+    3300232: blad3 8
+    3300234: blad3 9
+    3300236: blad4
+    3300238: blad4 1
+    3300240: blad4 10
+    3300242: blad4 11
+    3300244: blad4 12
+    3300246: blad4 13
+    3300248: blad4 14
+    3300250: blad4 15
+    3300252: blad4 16
+    3300254: blad4 17
+    3300256: blad4 18
+    3300258: blad4 19
+    3300260: blad4 2
+    3300262: blad4 20
+    3300264: blad4 21
+    3300266: blad4 22
+    3300268: blad4 23
+    3300270: blad4 24
+    3300272: blad4 25
+    3300274: blad4 26
+    3300276: blad4 27
+    3300278: blad4 3
+    3300280: blad4 4
+    3300282: blad4 5
+    3300284: blad4 6
+    3300286: blad4 7
+    3300288: blad4 8
+    3300290: blad4 9
+    3300292: blad5
+    3300294: blad5 1
+    3300296: blad5 10
+    3300298: blad5 11
+    3300300: blad5 12
+    3300302: blad5 13
+    3300304: blad5 14
+    3300306: blad5 15
+    3300308: blad5 16
+    3300310: blad5 17
+    3300312: blad5 18
+    3300314: blad5 19
+    3300316: blad5 2
+    3300318: blad5 20
+    3300320: blad5 21
+    3300322: blad5 22
+    3300324: blad5 23
+    3300326: blad5 24
+    3300328: blad5 25
+    3300330: blad5 26
+    3300332: blad5 27
+    3300334: blad5 3
+    3300336: blad5 4
+    3300338: blad5 5
+    3300340: blad5 6
+    3300342: blad5 7
+    3300344: blad5 8
+    3300346: blad5 9
+    3300348: blad6
+    3300350: blad6 1
+    3300352: blad6 10
+    3300354: blad6 11
+    3300356: blad6 12
+    3300358: blad6 13
+    3300360: blad6 14
+    3300362: blad6 15
+    3300364: blad6 16
+    3300366: blad6 17
+    3300368: blad6 18
+    3300370: blad6 19
+    3300372: blad6 2
+    3300374: blad6 20
+    3300376: blad6 21
+    3300378: blad6 22
+    3300380: blad6 23
+    3300382: blad6 24
+    3300384: blad6 25
+    3300386: blad6 26
+    3300388: blad6 27
+    3300390: blad6 3
+    3300392: blad6 4
+    3300394: blad6 5
+    3300396: blad6 6
+    3300398: blad6 7
+    3300400: blad6 8
+    3300402: blad6 9
+    3300404: blad7
+    3300406: blad7 1
+    3300408: blad7 10
+    3300410: blad7 11
+    3300412: blad7 12
+    3300414: blad7 13
+    3300416: blad7 14
+    3300418: blad7 15
+    3300420: blad7 16
+    3300422: blad7 17
+    3300424: blad7 18
+    3300426: blad7 19
+    3300428: blad7 2
+    3300430: blad7 20
+    3300432: blad7 21
+    3300434: blad7 22
+    3300436: blad7 23
+    3300438: blad7 24
+    3300440: blad7 25
+    3300442: blad7 26
+    3300444: blad7 27
+    3300446: blad7 3
+    3300448: blad7 4
+    3300450: blad7 5
+    3300452: blad7 6
+    3300454: blad7 7
+    3300456: blad7 8
+    3300458: blad7 9
+    3300460: blad8
+    3300462: blad8 1
+    3300464: blad9
+    3300466: blad9 1
+    3300468: pot
+    4300000: pot
+    4300002: blad2
+    4300004: blad3
+    4300006: blad4
+    4300008: blad5
+    4300010: blad6
+    4300012: blad7
+    4300014: blad2
+    4300016: blad3
+    4300018: blad4
+    4300020: blad5
+    4300022: blad6
+    4300024: blad7
+    4300026: blad
+    4300028: blad1
+    4300030: blad2
+    4300032: blad3
+    4300034: blad4
+    4300036: blad5
+    4300038: blad6
+    4300040: blad7
+    4300042: blad
+    4300044: blad1
+    4300046: blad2
+    4300048: blad3
+    4300050: blad4
+    4300052: blad5
+    4300054: blad6
+    4300056: blad7
+    4300058: blad
+    4300060: blad1
+    4300062: blad2
+    4300064: blad3
+    4300066: blad4
+    4300068: blad5
+    4300070: blad6
+    4300072: blad7
+    4300074: blad
+    4300076: blad1
+    4300078: blad2
+    4300080: blad3
+    4300082: blad4
+    4300084: blad5
+    4300086: blad6
+    4300088: blad7
+    4300090: blad12
+    4300092: blad13
+    4300094: blad
+    4300096: blad1
+    4300098: blad2
+    4300100: blad3
+    4300102: blad4
+    4300104: blad5
+    4300106: blad6
+    4300108: blad7
+    4300110: blad
+    4300112: blad1
+    4300114: blad2
+    4300116: blad3
+    4300118: blad4
+    4300120: blad5
+    4300122: blad6
+    4300124: blad7
+    4300126: blad
+    4300128: blad1
+    4300130: blad2
+    4300132: blad3
+    4300134: blad4
+    4300136: blad5
+    4300138: blad6
+    4300140: blad7
+    4300142: blad12
+    4300144: blad13
+    4300146: blad
+    4300148: blad1
+    4300150: blad2
+    4300152: blad3
+    4300154: blad4
+    4300156: blad5
+    4300158: blad6
+    4300160: blad7
+    4300162: blad
+    4300164: blad1
+    4300166: blad2
+    4300168: blad3
+    4300170: blad4
+    4300172: blad5
+    4300174: blad6
+    4300176: blad7
+    4300178: blad14
+    4300180: blad
+    4300182: blad1
+    4300184: blad2
+    4300186: blad3
+    4300188: blad4
+    4300190: blad5
+    4300192: blad6
+    4300194: blad7
+    4300196: blad
+    4300198: blad1
+    4300200: blad2
+    4300202: blad3
+    4300204: blad4
+    4300206: blad5
+    4300208: blad6
+    4300210: blad7
+    4300212: blad
+    4300214: blad1
+    4300216: blad2
+    4300218: blad3
+    4300220: blad4
+    4300222: blad5
+    4300224: blad6
+    4300226: blad7
+    4300228: blad8
+    4300230: blad9
+    4300232: blad10
+    4300234: blad11
+    4300236: blad2
+    4300238: blad3
+    4300240: blad4
+    4300242: blad5
+    4300244: blad6
+    4300246: blad7
+    4300248: blad2
+    4300250: blad3
+    4300252: blad4
+    4300254: blad5
+    4300256: blad6
+    4300258: blad7
+    4300260: blad
+    4300262: blad1
+    4300264: blad2
+    4300266: blad3
+    4300268: blad4
+    4300270: blad5
+    4300272: blad6
+    4300274: blad7
+    4300276: blad
+    4300278: blad1
+    4300280: blad2
+    4300282: blad3
+    4300284: blad4
+    4300286: blad5
+    4300288: blad6
+    4300290: blad7
+    4300292: blad
+    4300294: blad1
+    4300296: blad2
+    4300298: blad3
+    4300300: blad4
+    4300302: blad5
+    4300304: blad6
+    4300306: blad7
+    4300308: blad
+    4300310: blad1
+    4300312: blad2
+    4300314: blad3
+    4300316: blad4
+    4300318: blad5
+    4300320: blad6
+    4300322: blad7
+    4300324: blad12
+    4300326: blad13
+    4300328: blad
+    4300330: blad1
+    4300332: blad2
+    4300334: blad3
+    4300336: blad4
+    4300338: blad5
+    4300340: blad6
+    4300342: blad7
+    4300344: blad
+    4300346: blad1
+    4300348: blad2
+    4300350: blad3
+    4300352: blad4
+    4300354: blad5
+    4300356: blad6
+    4300358: blad7
+    4300360: blad
+    4300362: blad1
+    4300364: blad2
+    4300366: blad3
+    4300368: blad4
+    4300370: blad5
+    4300372: blad6
+    4300374: blad7
+    4300376: blad12
+    4300378: blad13
+    4300380: blad
+    4300382: blad1
+    4300384: blad2
+    4300386: blad3
+    4300388: blad4
+    4300390: blad5
+    4300392: blad6
+    4300394: blad7
+    4300396: blad
+    4300398: blad1
+    4300400: blad2
+    4300402: blad3
+    4300404: blad4
+    4300406: blad5
+    4300408: blad6
+    4300410: blad7
+    4300412: blad14
+    4300414: blad
+    4300416: blad1
+    4300418: blad2
+    4300420: blad3
+    4300422: blad4
+    4300424: blad5
+    4300426: blad6
+    4300428: blad7
+    4300430: blad
+    4300432: blad1
+    4300434: blad2
+    4300436: blad3
+    4300438: blad4
+    4300440: blad5
+    4300442: blad6
+    4300444: blad7
+    4300446: blad
+    4300448: blad1
+    4300450: blad2
+    4300452: blad3
+    4300454: blad4
+    4300456: blad5
+    4300458: blad6
+    4300460: blad7
+    4300462: blad8
+    4300464: blad9
+    4300466: blad10
+    4300468: blad11
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
