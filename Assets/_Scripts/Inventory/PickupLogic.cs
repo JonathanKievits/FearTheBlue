@@ -6,6 +6,7 @@ public class PickupLogic : MonoBehaviour
 	[SerializeField]private ItemType type;
 	[SerializeField]private string name;
 	[Range(0,0.5f)][SerializeField]private float outlineWidth;
+	[SerializeField]private Color outlineColour;
 	public string Name{get{return name;}}
 	[Range(1,5)][SerializeField]private float maxDistance;	
 	private GameObject player;
@@ -42,7 +43,7 @@ public class PickupLogic : MonoBehaviour
 
 		if (distance <= maxDistance && !this.isOutlined)
 		{
-			this.outlining.outline (this.renderer, this.outlineWidth);	
+			this.outlining.outline (this.renderer, this.outlineWidth, outlineColour);	
 			this.isOutlined = !this.isOutlined;
 		}
 
