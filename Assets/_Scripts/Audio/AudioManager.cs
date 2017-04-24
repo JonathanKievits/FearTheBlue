@@ -24,6 +24,11 @@ public class AudioManager : MonoBehaviour
 		audioLoop (name).stop ();	
 	}
 
+	public bool isPlaying(string name)
+	{
+		return audioLoop (name).Source.isPlaying;
+	}
+
 	private Audio audioLoop(string name)
 	{
 		for (var i = 0; i < audio.Length; i++)

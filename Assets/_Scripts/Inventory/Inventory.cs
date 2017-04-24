@@ -53,6 +53,21 @@ public class Inventory : MonoBehaviour
 		return null;
 	}
 
+	public Item getItem(ItemType type, int index)
+	{
+		if (!inventory.ContainsKey (type))
+			return null;
+
+		for (int i = 0; i < getAllItemsOfType (type).Count; i++)
+		{
+			if (inventory [type] [i].Name == name)
+			{
+				return inventory [type] [i];
+			}
+		}
+		return null;
+	}
+
 	public int getAmountOfItems(ItemType type, string name)
 	{
 		var temp = 0;

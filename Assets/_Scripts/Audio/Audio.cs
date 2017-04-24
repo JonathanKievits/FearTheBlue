@@ -11,6 +11,7 @@ public class Audio
 	[Range(-1, 1)][SerializeField]private float panning;
 	[SerializeField]private bool loop;
 	private AudioSource source;
+	public AudioSource Source{get{return source;}}
 
 	public void setSource(AudioSource source)
 	{
