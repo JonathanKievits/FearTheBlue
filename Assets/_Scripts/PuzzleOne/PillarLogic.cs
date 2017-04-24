@@ -19,10 +19,15 @@ public class PillarLogic : MonoBehaviour
 		isEnabled = false;
 		hasObject = false;
 	}
+
 	private void Update()
 	{
 		if (Input.GetButtonDown (Controller.Cross))
 		{
+			var distance = (this.transform.position - player.transform.position).sqrMagnitude;
+			if (distance > maxDistance)
+				return;
+			
 			if (!hasObject)
 				setCube ();
 
@@ -31,6 +36,7 @@ public class PillarLogic : MonoBehaviour
 				enableCube ();
 				return;
 			}
+
 			disableCube ();
 		}
 	}
@@ -53,15 +59,11 @@ public class PillarLogic : MonoBehaviour
 
 	private void setCube()
 	{
-		var distance = (this.transform.position - player.transform.position).sqrMagnitude;
-		if (distance <= maxDistance)
+		if(inventory.getItem(ItemType.puzzleItem, "ToyCar") != null)
 		{
-			if(inventory.getItem(ItemType.puzzleItem, "ToyCar") != null)
-			{
-				objectToRotate.gameObject.SetActive (true);
-				inventory.removeItem (ItemType.puzzleItem, "ToyCar");
-				hasObject = true;
-			}
+			objectToRotate.gameObject.SetActive (true);
+			inventory.removeItem (ItemType.puzzleItem, "ToyCar");
+			hasObject = true;
 		}
 	}
 

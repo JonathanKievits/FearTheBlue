@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PickupLogic : MonoBehaviour
+public abstract class Pickup : MonoBehaviour
 {
 	[SerializeField]protected string name;
 	public string Name{get{return name;}}
@@ -49,7 +49,10 @@ public class PickupLogic : MonoBehaviour
 		if (this.isOutlined && Input.GetButtonDown(Controller.Cross))
 		{
 			inventory.AddItem (item);
+			onPickup ();
 			this.gameObject.SetActive(false);
 		}
 	}
+
+	protected virtual void onPickup(){}
 }
