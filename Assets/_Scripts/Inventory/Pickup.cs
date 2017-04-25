@@ -3,11 +3,15 @@
 public abstract class Pickup : MonoBehaviour
 {
 	[SerializeField]protected string name;
-	public string Name{get{return name;}}
+	public string Name{get{return name;}set{name = value;}}
 	[SerializeField]protected ItemType type;
+	public ItemType Type{get{return type;}set{type = value;}}
 	[SerializeField]protected Color outlineColour;
+	public Color OutlineColour{get{return outlineColour;}set{outlineColour = value;}}
 	[Range(0,0.5f)][SerializeField]protected float outlineWidth;
+	public float OutlineWidth{get{return outlineWidth;}set{outlineWidth = value;}}
 	[Range(1,5)][SerializeField]protected float maxDistance;	
+	public float MaxDistance{get{return maxDistance;}set{maxDistance = value;}}
 
 	protected GameObject player;
 	protected Item item;
