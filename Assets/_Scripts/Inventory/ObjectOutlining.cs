@@ -9,12 +9,13 @@ public class ObjectOutlining : MonoBehaviour
 	{
 		renderer.material.shader = outlineShader;
 		renderer.material.SetFloat ("_Outline", lineWidth);
-		renderer.material.SetColor ("_Color", Color.white);
-		renderer.material.SetColor ("_OutlineColor", colour);
+		renderer.material.SetColor ("_Colour", Color.white);
+		renderer.material.SetColor ("_OutlineColour", colour);
 	}
 
 	public void normal(Renderer renderer)
 	{
 		renderer.material.shader = normalShader;
+		renderer.material.SetFloat ("_Smoothness", 0);
 	}
 }
