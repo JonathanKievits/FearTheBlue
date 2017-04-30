@@ -11,6 +11,7 @@ public class Inventory : MonoBehaviour
 	{
 		if (!inventory.ContainsKey (item.Type))
 			inventory.Add (item.Type, new List<Item> ());
+		
 		inventory[item.Type].Add(item);
 		return;
 	}
@@ -35,6 +36,7 @@ public class Inventory : MonoBehaviour
 	{
 		if (!inventory.ContainsKey (type))
 			return null;
+		
 		return inventory[type];
 	}
 
