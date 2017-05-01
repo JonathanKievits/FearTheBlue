@@ -26,7 +26,7 @@ public class CheckController : MonoBehaviour
 
         if (os == "win32nt")
         {
-            if (joysticks.Contains("sony"))
+            if (joysticks.Contains("wireless controller"))
             {
                 Controller.setController(ControllerType.playstation, Os.windows);
                 return;
