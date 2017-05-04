@@ -22,6 +22,6 @@ public class LookScript : MonoBehaviour
 			this.transform.eulerAngles = new Vector3 (maxRotate, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
 		if (angle < -maxRotate)
 			this.transform.eulerAngles = new Vector3 (-maxRotate, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
-		player.transform.localEulerAngles += new Vector3 (0, y, 0).normalized*4;
+		player.transform.localEulerAngles += new Vector3 (0, y, 0).normalized*150*Time.deltaTime;
 	}
 }
