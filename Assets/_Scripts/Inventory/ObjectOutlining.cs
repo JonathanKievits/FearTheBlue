@@ -16,6 +16,5 @@ public class ObjectOutlining : MonoBehaviour
 	public void normal(Renderer renderer)
 	{
 		renderer.material.shader = normalShader;
-		renderer.material.SetFloat ("_Smoothness", 0);
 	}
 }

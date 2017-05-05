@@ -2,20 +2,25 @@
 
 public class PillarLogic : MonoBehaviour 
 {
-	private GameObject player;
-	private RotateObject objectToRotate;
-	[SerializeField]private LookScript lookScript;
-	[SerializeField]private Movement movementScript;
-	private Inventory inventory;
+	[Range(1,20)][SerializeField]private float maxDistance;
 	private bool isEnabled;
 	private bool hasObject;
-	[Range(1,20)][SerializeField]private float maxDistance;
+
+	private LookScript lookScript;
+	private Movement movementScript;
+	private CheckDistance2Player range;
+	private RotateObject objectToRotate;
+	private Inventory inventory;
+	private PuzzleManager manager;
 
 	private void Start()
 	{
-		player = GameObject.FindGameObjectWithTag ("Player");
 		objectToRotate = this.transform.GetChild (0).gameObject.GetComponent<RotateObject>();
-		inventory = GameObject.FindGameObjectWithTag ("GameController").GetComponent<Inventory> ();
+		lookScript = GameObject.FindGameObjectWithTag (Tags.player).GetComponentInChildren<LookScript> ();
+		movementScript = GameObject.FindGameObjectWithTag (Tags.player).GetComponent<Movement> ();
+		range = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<CheckDistance2Player> ();
+		inventory = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<Inventory> ();
+		manager = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<PuzzleManager>();
 		isEnabled = false;
 		hasObject = false;
 	}
@@ -24,8 +29,7 @@ public class PillarLogic : MonoBehaviour
 	{
 		if (Input.GetButtonDown (Controller.Cross))
 		{
-			var distance = (this.transform.position - player.transform.position).sqrMagnitude;
-			if (distance > maxDistance)
+			if (!range.inRange(this.transform.position, maxDistance))
 				return;
 			
 			if (!hasObject)
@@ -36,7 +40,6 @@ public class PillarLogic : MonoBehaviour
 				enableCube ();
 				return;
 			}
-
 			disableCube ();
 		}
 	}
@@ -45,26 +48,23 @@ public class PillarLogic : MonoBehaviour
 	{
 		if (!hasObject)
 			return;
-		
-		var distance = (this.transform.position - player.transform.position).sqrMagnitude;
-		if (distance <= maxDistance)
-		{
-			objectToRotate.gameObject.SetActive (true);
-			objectToRotate.enabled = true;
-			lookScript.enabled = false;
-			movementScript.enabled = false;
-			isEnabled = true;
-		}
+
+		manager.setState (puzzleID.rotate);
+		objectToRotate.gameObject.SetActive (true);
+		objectToRotate.enabled = true;
+		lookScript.enabled = false;
+		movementScript.enabled = false;
+		isEnabled = true;
 	}
 
 	private void setCube()
 	{
-		if(inventory.getItem(ItemType.puzzleItem, "ToyCar") != null)
-		{
-			objectToRotate.gameObject.SetActive (true);
-			inventory.removeItem (ItemType.puzzleItem, "ToyCar");
-			hasObject = true;
-		}
+		if (inventory.getItem (ItemType.puzzleItem, "ToyCar") == null)
+			return;
+
+		objectToRotate.gameObject.SetActive (true);
+		inventory.removeItem (ItemType.puzzleItem, "ToyCar");
+		hasObject = true;
 	}
 
 	public void disableCube()
@@ -73,5 +73,6 @@ public class PillarLogic : MonoBehaviour
 		lookScript.enabled = true;
 		movementScript.enabled = true;
 		isEnabled = false;
+		manager.exitState ();
 	}
 }

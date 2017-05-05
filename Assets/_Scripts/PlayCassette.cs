@@ -5,19 +5,19 @@ public class PlayCassette : MonoBehaviour
 	[Range(0,0.5f)][SerializeField]protected float outlineWidth; 
 	[Range(1,5)][SerializeField]protected float maxDistance; 	
 
-	private Transform player; 
 	private AudioManager audio; 
 	private Inventory inventory; 
 	protected Renderer renderer;
 	private ObjectOutlining outlining; 
+	private CheckDistance2Player range;
 	private bool isOutlined; 
 
 	private void Start() 
 	{
-		this.player = GameObject.FindGameObjectWithTag ("Player").transform; 
-		this.inventory = GameObject.FindGameObjectWithTag ("GameController").GetComponent<Inventory>();
-		this.outlining = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ObjectOutlining>();
-		this.audio = GameObject.FindGameObjectWithTag ("GameController").GetComponent<AudioManager>();
+		this.range = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<CheckDistance2Player>();
+		this.inventory = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<Inventory>();
+		this.outlining = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<ObjectOutlining>();
+		this.audio = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<AudioManager>();
 		this.renderer = this.GetComponent<Renderer> ();
 		if (this.renderer == null)
 			this.renderer = this.GetComponentInChildren<Renderer> ();
@@ -25,15 +25,14 @@ public class PlayCassette : MonoBehaviour
 
 	private void Update()
 	{
-		var distance = (player.transform.position - this.transform.position).sqrMagnitude; 
-		if (distance > maxDistance && this.isOutlined)
+		if (!range.inRange(this.transform.position, maxDistance) && this.isOutlined)
 		{
 			this.outlining.normal(this.renderer);
 			this.isOutlined = !this.isOutlined;
 			return;
 		} 
 
-		if (distance <= maxDistance && !this.isOutlined)
+		if (range.inRange(this.transform.position, maxDistance) && !this.isOutlined)
 		{
 			this.outlining.outline (this.renderer, this.outlineWidth, outlineColour);	
 			this.isOutlined = !this.isOutlined;
@@ -47,12 +46,6 @@ public class PlayCassette : MonoBehaviour
 			var tapes = inventory.getAllItemsOfType (ItemType.cassette);
 			if (tapes == null)
 				return;
-			/*
-			foreach (Item tape in tapes)
-			{
-				if (this.audio.isPlaying (tape.Name))
-					return;	
-			}*/
 
 			if (this.audio.isPlaying (tapes [0].Name))
 				return;

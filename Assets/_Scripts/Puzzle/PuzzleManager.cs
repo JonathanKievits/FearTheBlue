@@ -16,8 +16,8 @@ public class PuzzleManager : MonoBehaviour
 	private void Start()
 	{
 		puzzles = new Dictionary<puzzleID, PuzzleBase>();	
+		addState (puzzleID.keypad, FindObjectOfType<KeypadPuzzle>());
 		addState (puzzleID.rotate, FindObjectOfType<RotatePuzzle>());
-		setState (puzzleID.rotate);
 	}
 
 	private void Update()
@@ -40,6 +40,8 @@ public class PuzzleManager : MonoBehaviour
 
 	public void exitState()
 	{
+		if (current == null)
+			return;
 		current.cancel ();
 		current = null;
 	}

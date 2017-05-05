@@ -9,6 +9,7 @@ public class RotatePuzzle : PuzzleBase
 	[SerializeField]private float maxOffset;
 	[SerializeField]private float correctY;
 	[SerializeField]private float corrextZ;
+
 	private PillarLogic pillarLogic;
 	private RotateObject rotateObject;
 	private bool yOkay;
@@ -19,12 +20,14 @@ public class RotatePuzzle : PuzzleBase
 		base.Start ();
 		key.SetActive (false);
 		pillarLogic = FindObjectOfType<PillarLogic> ();
-		rotateObject = objectToRotate.gameObject.GetComponent<RotateObject> ();
+		if (!(rotateObject = objectToRotate.gameObject.GetComponent<RotateObject> ()))
+			rotateObject = objectToRotate.gameObject.AddComponent<RotateObject> ();
 	}
 
 	public override void startPuzzle ()
 	{
 		yOkay = false;
+		zOkay = false;
 	}
 
 	protected override void onSolve()
@@ -50,6 +53,7 @@ public class RotatePuzzle : PuzzleBase
 	{
 		yOkay = false;
 		zOkay = false;
+
 		if(System.Math.Abs(objectToRotate.localEulerAngles.y - correctY) <= maxOffset)
 			yOkay = true;
 

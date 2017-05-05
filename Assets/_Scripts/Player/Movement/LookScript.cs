@@ -15,13 +15,13 @@ public class LookScript : MonoBehaviour
 	{
 		var x = Input.GetAxisRaw (Controller.RightStickX);
 		var y = Input.GetAxisRaw (Controller.RightStickY);
-		this.transform.eulerAngles += new Vector3 (x, 0, 0).normalized * lookSpeed;
+		this.transform.eulerAngles += new Vector3 (x, 0, 0).normalized * lookSpeed * Time.deltaTime;
 		var angle = this.transform.eulerAngles.x;
 		angle = (angle > 180) ? angle - 360 : angle;
 		if (angle > maxRotate)
 			this.transform.eulerAngles = new Vector3 (maxRotate, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
 		if (angle < -maxRotate)
 			this.transform.eulerAngles = new Vector3 (-maxRotate, this.transform.eulerAngles.y, this.transform.eulerAngles.z);
-		player.transform.localEulerAngles += new Vector3 (0, y, 0).normalized*4;
+		player.transform.localEulerAngles += new Vector3 (0, y, 0).normalized*lookSpeed*1.2f*Time.deltaTime;
 	}
 }

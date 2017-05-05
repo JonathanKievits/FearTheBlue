@@ -10,6 +10,7 @@ public class Audio
 	[Range(-3, 3)][SerializeField]private float pitch;
 	[Range(-1, 1)][SerializeField]private float panning;
 	[SerializeField]private bool loop;
+	[SerializeField]private bool playOnAwake;
 	private AudioSource source;
 	public AudioSource Source{get{return source;}}
 
@@ -22,6 +23,7 @@ public class Audio
 		this.source.pitch = this.pitch;
 		this.source.panStereo = this.panning;
 		this.source.loop = this.loop;
+		this.source.playOnAwake = this.playOnAwake;
 	}
 
 	public void play()
