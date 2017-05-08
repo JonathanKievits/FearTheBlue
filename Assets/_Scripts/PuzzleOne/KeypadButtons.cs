@@ -2,18 +2,48 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Keypad button logic.
+/// </summary>
 public class KeypadButtons : MonoBehaviour 
 {
+    /// <summary>
+    /// The buttons.
+    /// </summary>
 	[SerializeField]private GameObject[] buttons;
+    /// <summary>
+    /// Reference to Textobject that shows the code.
+    /// </summary>
 	[SerializeField]private Text code;
 
+    /// <summary>
+    /// Reference the renderers of the buttons.
+    /// </summary>
 	private List<Renderer> renderers;
+    /// <summary>
+    /// Reference to the ObjectOutlining class.
+    /// </summary>
 	private ObjectOutlining outline;
+    /// <summary>
+    /// The current button.
+    /// </summary>
 	private int currButton;
+    /// <summary>
+    /// The length of the code.
+    /// </summary>
 	private int codeLength;
+    /// <summary>
+    /// Boolean if already started.
+    /// </summary>
 	private bool start;
+    /// <summary>
+    /// Boolean if the button is being hold.
+    /// </summary>
 	private bool hold;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		outline = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<ObjectOutlining> ();
@@ -24,6 +54,9 @@ public class KeypadButtons : MonoBehaviour
 		for (var i = 0; i < buttons.Length; i++){renderers.Add(buttons [i].GetComponent<Renderer> ());}
 	}
 
+    /// <summary>
+    /// Selects the first buttton.
+    /// </summary>
 	public void selectFirstButtton()
 	{
 		code.text = "";
@@ -33,12 +66,19 @@ public class KeypadButtons : MonoBehaviour
 		start = true;
 	}
 
+    /// <summary>
+    /// Stops the buttons.
+    /// </summary>
 	public void stopButtons()
 	{
 		start = false;
 		outline.normal (renderers[currButton]);
 	}
 
+    /// <summary>
+    /// Selects the button.
+    /// </summary>
+    /// <param name="index">Index.</param>
 	private void selectButton(int index)
 	{
 		outline.normal (renderers[currButton]);
@@ -46,6 +86,9 @@ public class KeypadButtons : MonoBehaviour
 		return;
 	}
 
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
 	private void Update()
 	{
 		if (!start)

@@ -9,12 +9,7 @@ public class CheckController : MonoBehaviour
 {
     private void Awake()
     {
-        var joysticks = "";
-        if (Input.GetJoystickNames()[0].ToLower() != null)
-            joysticks = Input.GetJoystickNames()[0].ToLower();
-
-        if (Input.GetJoystickNames()[1].ToLower() != null)
-            joysticks = Input.GetJoystickNames()[1].ToLower();
+        var joysticks = Input.GetJoystickNames()[0].ToLower();
 
         var os = System.Environment.OSVersion.Platform.ToString().ToLower();
 		if (os.Contains("unix") || os.Contains("mac"))

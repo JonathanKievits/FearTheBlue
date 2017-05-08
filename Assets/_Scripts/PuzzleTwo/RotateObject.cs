@@ -1,15 +1,34 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Rotates an object.
+/// </summary>
 public class RotateObject : MonoBehaviour 
 {
-    private float angleZ, angleY;
+    /// <summary>
+    /// The z angle.
+    /// </summary>
+    private float angleZ;
+    /// <summary>
+    /// The y angle;
+    /// </summary>
+    private float angleY;
+    /// <summary>
+    /// The rotation speed multiplier.
+    /// </summary>
 	[SerializeField]private float speed;
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
         angleZ = this.transform.localEulerAngles.z;
         angleY = this.transform.localEulerAngles.y;
 	}
 
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
 	private void Update()
 	{
 		angleZ += Input.GetAxisRaw (Controller.RightStickX) * Time.deltaTime;
