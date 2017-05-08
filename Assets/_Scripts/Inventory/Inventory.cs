@@ -2,18 +2,34 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/// <summary>
+/// Inventory class.
+/// </summary>
 public class Inventory : MonoBehaviour 
 {
+    /// <summary>
+    /// Holds the items.
+    /// </summary>
     private Dictionary <ItemType,List<Item>> inventory;
 	public Dictionary <ItemType, List<Item>> Inventroy{get{return inventory;}}
+    /// <summary>
+    /// Reference to the Audiomanager.
+    /// </summary>
     private AudioManager audioManager;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
     private void Start()
     {
         inventory = new Dictionary<ItemType,List<Item>>();
         audioManager = this.GetComponent<AudioManager>();
     }
 
+    /// <summary>
+    /// Adds item to the inventory.
+    /// </summary>
+    /// <param name="item">Item.</param>
 	public void AddItem (Item item)
 	{
 		if (!inventory.ContainsKey (item.Type))
@@ -24,6 +40,11 @@ public class Inventory : MonoBehaviour
 		return;
 	}
 
+    /// <summary>
+    /// Removes item from the inventory.
+    /// </summary>
+    /// <param name="itemType">Item type.</param>
+    /// <param name="itemName">Item name.</param>
 	public void removeItem(ItemType itemType, string itemName)
 	{
 		if (!inventory.ContainsKey (itemType))
@@ -40,6 +61,11 @@ public class Inventory : MonoBehaviour
 		return;
 	}
 
+    /// <summary>
+    /// Gets the all items of a type.
+    /// </summary>
+    /// <returns>The all items of type.</returns>
+    /// <param name="type">Type.</param>
 	public List<Item> getAllItemsOfType(ItemType type)
 	{
 		if (!inventory.ContainsKey (type))
@@ -48,6 +74,12 @@ public class Inventory : MonoBehaviour
 		return inventory[type];
 	}
 
+    /// <summary>
+    /// Gets an tem with the name.
+    /// </summary>
+    /// <returns>The item.</returns>
+    /// <param name="type">Type.</param>
+    /// <param name="name">Name.</param>
 	public Item getItem(ItemType type, string name)
 	{
 		if (!inventory.ContainsKey (type))
@@ -63,6 +95,12 @@ public class Inventory : MonoBehaviour
 		return null;
 	}
 
+    /// <summary>
+    /// Gets and item with the index.
+    /// </summary>
+    /// <returns>The item.</returns>
+    /// <param name="type">Type.</param>
+    /// <param name="index">Index.</param>
 	public Item getItem(ItemType type, int index)
 	{
 		if (!inventory.ContainsKey (type))
@@ -78,6 +116,12 @@ public class Inventory : MonoBehaviour
 		return null;
 	}
 
+    /// <summary>
+    /// Gets the amount of items.
+    /// </summary>
+    /// <returns>The amount of items.</returns>
+    /// <param name="type">Type.</param>
+    /// <param name="name">Name.</param>
 	public int getAmountOfItems(ItemType type, string name)
 	{
 		var temp = 0;
