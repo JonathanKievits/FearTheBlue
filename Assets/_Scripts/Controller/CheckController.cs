@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Checks wich controller is connected to wich operating system.
+/// </summary>
 public class CheckController : MonoBehaviour
 {
     private void Awake()
@@ -25,7 +28,7 @@ public class CheckController : MonoBehaviour
 
 		if (os.Contains("win32nt") || os.Contains("win"))
         {
-            if (joysticks.Contains("sony"))
+            if (joysticks.Contains("wireless controller") && joysticks.Contains("sony"))
             {
                 Controller.setController(ControllerType.playstation, Os.windows);
                 return;

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-
+/// <summary>
+/// Check distance to player.
+/// </summary>
 public class CheckDistance2Player : MonoBehaviour 
 {
 	private Transform player;

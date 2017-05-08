@@ -1,20 +1,56 @@
 ﻿using System.Collections;
 
 using UnityEngine;
+/// <summary>
+/// Play cassette.
+/// </summary>
 public class PlayCassette : MonoBehaviour
 {
+    /// <summary>
+    /// The outline colour.
+    /// </summary>
 	[SerializeField]private Color outlineColour;
+    /// <summary>
+    /// The insert soundclip.
+    /// </summary>
     [SerializeField]private AudioClip insertSound;
+    /// <summary>
+    /// The width of the outline.
+    /// </summary>
     [Range(0,0.5f)][SerializeField]private float outlineWidth;
+    /// <summary>
+    /// The max distance to the player.
+    /// </summary>
     [Range(1,5)][SerializeField]private float maxDistance;
 
+    /// <summary>
+    /// Reference to audiomanager.
+    /// </summary>
 	private AudioManager audio;
+    /// <summary>
+    /// Reference to inventory.
+    /// </summary>
 	private Inventory inventory;
+    /// <summary>
+    /// Reference to the Renderer.
+    /// </summary>
 	private Renderer renderer;
+    /// <summary>
+    /// Reference to ObjectOulining
+    /// </summary>
 	private ObjectOutlining outlining;
+    /// <summary>
+    /// Reference to CheckDistance2Player
+    /// </summary>
 	private CheckDistance2Player range;
+    /// <summary>
+    /// Boolean if the object is outlined
+    /// </summary>
 	private bool isOutlined;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		this.range = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<CheckDistance2Player>();
@@ -26,6 +62,9 @@ public class PlayCassette : MonoBehaviour
 			this.renderer = this.GetComponentInChildren<Renderer> ();
 	}
 
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
 	private void Update()
 	{
 		if (!range.inRange(this.transform.position, maxDistance) && this.isOutlined)
@@ -49,6 +88,10 @@ public class PlayCassette : MonoBehaviour
 
 	}
 
+    /// <summary>
+    /// Playes the tape.
+    /// </summary>
+    /// <returns>The tape.</returns>
     private IEnumerator playTape()
     {
         var tapes = inventory.getAllItemsOfType (ItemType.cassette);

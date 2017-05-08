@@ -2,27 +2,78 @@
 using System.Collections;
 
 [RequireComponent(typeof(HingeJoint))]
+/// <summary>
+/// Door logic.
+/// </summary>
 public class DoorLogic : MonoBehaviour 
 {
 	private enum HingePosition{left, right};
 
+    /// <summary>
+    /// Does the door need a key.
+    /// </summary>
 	[SerializeField]private bool needsKey;
+    /// <summary>
+    /// The name of the key.
+    /// </summary>
 	[SerializeField]private string keyName;
+    /// <summary>
+    /// The position the player should have after opening the door.
+    /// </summary>
 	[SerializeField]private Transform newPosition;
+    /// <summary>
+    /// The hinge position.
+    /// </summary>
 	[SerializeField]private HingePosition hingePosition;
 
+    /// <summary>
+    /// If player is in range of the door.
+    /// </summary>
 	private bool inRange;
+    /// <summary>
+    /// If the door is busy opening.
+    /// </summary>
     private bool isOpening;
+    /// <summary>
+    /// The max rotation of the door.
+    /// </summary>
 	private float maxRotate;
+    /// <summary>
+    /// Reference to the lookscript.
+    /// </summary>
     private LookScript look;
+    /// <summary>
+    /// Reference to the Movement script.
+    /// </summary>
     private Movement movement;
+    /// <summary>
+    /// Reference to the player.
+    /// </summary>
 	private GameObject player;
+    /// <summary>
+    /// Reference to the Inventory script.
+    /// </summary>
 	private Inventory inventory;
+    /// <summary>
+    /// The original rotation of the door.
+    /// </summary>
 	private Vector3 originalRotation;
+    /// <summary>
+    /// The original position of the door.
+    /// </summary>
 	private Vector3 originalPosition;
+    /// <summary>
+    /// Reference to the Audiomanager.
+    /// </summary>
 	private AudioManager audioManager;
+    /// <summary>
+    /// Reference to TeleportThroughDoor script.
+    /// </summary>
 	private TeleportThroughDoor teleport;
 
+    /// <summary>
+    /// Start this instance.
+    /// </summary>
 	private void Start()
 	{
 		this.inRange = false;
@@ -42,6 +93,10 @@ public class DoorLogic : MonoBehaviour
 		this.teleport = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<TeleportThroughDoor> ();
 	}
 
+    /// <summary>
+    /// Raises the trigger enter event.
+    /// </summary>
+    /// <param name="other">Other.</param>
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject != this.player)
@@ -50,6 +105,10 @@ public class DoorLogic : MonoBehaviour
 		inRange = true;
 	}
 
+    /// <summary>
+    /// Raises the trigger exit event.
+    /// </summary>
+    /// <param name="other">Other.</param>
 	private void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject != this.player)
@@ -58,6 +117,9 @@ public class DoorLogic : MonoBehaviour
 		inRange = false;
 	}
 	
+    /// <summary>
+    /// Update this instance.
+    /// </summary>
 	private void Update()
 	{
 		if (!inRange)
@@ -78,6 +140,10 @@ public class DoorLogic : MonoBehaviour
 		}
 	}
 
+    /// <summary>
+    /// Opens the door.
+    /// </summary>
+    /// <returns>The door.</returns>
 	private IEnumerator openDoor()
 	{
         this.isOpening = true;
