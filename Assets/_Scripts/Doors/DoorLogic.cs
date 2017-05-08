@@ -12,7 +12,10 @@ public class DoorLogic : MonoBehaviour
 	[SerializeField]private HingePosition hingePosition;
 
 	private bool inRange;
+    private bool isOpening;
 	private float maxRotate;
+    private LookScript look;
+    private Movement movement;
 	private GameObject player;
 	private Inventory inventory;
 	private Vector3 originalRotation;
@@ -23,6 +26,7 @@ public class DoorLogic : MonoBehaviour
 	private void Start()
 	{
 		this.inRange = false;
+        this.isOpening = false;
 		this.originalRotation = this.transform.localEulerAngles;
 		this.originalPosition = this.transform.localPosition;
 		if(this.hingePosition == HingePosition.right)
@@ -31,6 +35,8 @@ public class DoorLogic : MonoBehaviour
 			this.maxRotate = Mathf.Abs (this.transform.localEulerAngles.y + 10);
 
 		this.player = GameObject.FindGameObjectWithTag (Tags.player);
+        this.movement = player.GetComponent<Movement>();
+        this.look = player.GetComponentInChildren<LookScript>();
 		this.inventory = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<Inventory> ();
 		this.audioManager = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<AudioManager> ();
 		this.teleport = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<TeleportThroughDoor> ();
@@ -61,17 +67,22 @@ public class DoorLogic : MonoBehaviour
 		{
 			if (this.needsKey && inventory.getItem (ItemType.key, keyName) == null) 
 			{
-				audioManager.playSound ("doorNeedsKey");
+				audioManager.playSound ("DoorNeedsKey");
 				return;
 			}
 			
+            if (this.isOpening)
+                return;
+            
 			StartCoroutine ("openDoor");
 		}
 	}
 
 	private IEnumerator openDoor()
 	{
-		//audioManager.playSound ("DoorOpens");
+        this.isOpening = true;
+        movement.enabled = look.enabled = false;
+		audioManager.playSound ("DoorOpens");
 		if (this.hingePosition == HingePosition.right) 
 		{
 			while (Mathf.Abs (this.transform.localEulerAngles.y) > maxRotate) 
@@ -90,11 +101,13 @@ public class DoorLogic : MonoBehaviour
 				yield return new WaitForSeconds (0.005f);
 			}
 		}
-		audioManager.playSound ("DoorCloses");
 
 		teleport.teleport (newPosition);
 		yield return new WaitForSeconds (1f);
+        audioManager.playSound ("DoorCloses");
 		this.transform.localPosition = this.originalPosition;
 		this.transform.localEulerAngles = this.originalRotation;
+        this.isOpening = false;
+        movement.enabled = look.enabled = true;
 	}
 }

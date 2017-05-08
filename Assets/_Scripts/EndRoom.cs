@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndRoom : MonoBehaviour 
+public class EndRoom : MonoBehaviour
 {
 	private void OnTriggerStay()
 	{

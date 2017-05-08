@@ -4,14 +4,22 @@ using System.Collections.Generic;
 
 public class Inventory : MonoBehaviour 
 {
-	private Dictionary <ItemType,List<Item>> inventory = new Dictionary<ItemType,List<Item>>();
+    private Dictionary <ItemType,List<Item>> inventory;
 	public Dictionary <ItemType, List<Item>> Inventroy{get{return inventory;}}
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        inventory = new Dictionary<ItemType,List<Item>>();
+        audioManager = this.GetComponent<AudioManager>();
+    }
 
 	public void AddItem (Item item)
 	{
 		if (!inventory.ContainsKey (item.Type))
 			inventory.Add (item.Type, new List<Item> ());
-		
+        
+        audioManager.playSound("Pickup");
 		inventory[item.Type].Add(item);
 		return;
 	}

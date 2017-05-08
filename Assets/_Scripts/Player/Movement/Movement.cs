@@ -30,6 +30,6 @@ public class Movement : MonoBehaviour
 		rigid.MovePosition(rigid.transform.localPosition + velocity);
 		var mag = Mathf.Abs(velocity.z*10);
 		if (mag >= 0.01)
-			audioManager.playSound ("step1");
+			audioManager.playSound ("Footstep1");
 	}
 }

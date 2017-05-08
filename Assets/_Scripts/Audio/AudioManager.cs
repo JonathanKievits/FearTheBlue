@@ -1,16 +1,17 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour 
 {
-	[SerializeField]private Audio[] audio;
+    [SerializeField]private Audio[] audioClips;
 
 	private void Awake()
 	{
-		for (var i = 0; i < audio.Length; i++)
+        for (var i = 0; i < audioClips.Length; i++)
 		{
-			GameObject go = new GameObject ("Audio: " + audio[i].Name.ToString());
+			GameObject go = new GameObject ("Audio: " + audioClips[i].Name.ToString());
 			go.transform.SetParent (this.transform);
-			audio [i].setSource (go.AddComponent<AudioSource>());
+			audioClips [i].setSource (go.AddComponent<AudioSource>());
 		}
 	}
 
@@ -31,11 +32,11 @@ public class AudioManager : MonoBehaviour
 
 	private Audio audioLoop(string name)
 	{
-		for (var i = 0; i < audio.Length; i++)
+        for (var i = 0; i < audioClips.Length; i++)
 		{
-			if (audio [i].Name == name)
+			if (audioClips [i].Name == name)
 			{
-				return audio[i];
+				return audioClips[i];
 			}
 		}
 		throw new System.Exception ("AudioManager: Could not find: " + name);
