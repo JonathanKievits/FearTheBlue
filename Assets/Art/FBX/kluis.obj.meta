@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: f2fb290908408014792e6d3cb440d4e3
+timeCreated: 1491984765
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: group3_ding
+    100002: group3_group2_scharnier1
+    100004: group3_group4_handel1
+    100006: group3_group4_handel2
+    100008: group3_handel_group4
+    100010: group3_kluisdeur
+    100012: group3_onderding
+    100014: group3_pootje
+    100016: group3_pootje1
+    100018: group3_pootje2
+    100020: group3_pootje3
+    100022: group3_scharnier_group2
+    100024: //RootNode
+    100026: kluis_group3
+    400000: group3_ding
+    400002: group3_group2_scharnier1
+    400004: group3_group4_handel1
+    400006: group3_group4_handel2
+    400008: group3_handel_group4
+    400010: group3_kluisdeur
+    400012: group3_onderding
+    400014: group3_pootje
+    400016: group3_pootje1
+    400018: group3_pootje2
+    400020: group3_pootje3
+    400022: group3_scharnier_group2
+    400024: //RootNode
+    400026: kluis_group3
+    2300000: group3_ding
+    2300002: group3_group2_scharnier1
+    2300004: group3_group4_handel1
+    2300006: group3_group4_handel2
+    2300008: group3_handel_group4
+    2300010: group3_kluisdeur
+    2300012: group3_onderding
+    2300014: group3_pootje
+    2300016: group3_pootje1
+    2300018: group3_pootje2
+    2300020: group3_pootje3
+    2300022: group3_scharnier_group2
+    2300024: kluis_group3
+    3300000: group3_ding
+    3300002: group3_group2_scharnier1
+    3300004: group3_group4_handel1
+    3300006: group3_group4_handel2
+    3300008: group3_handel_group4
+    3300010: group3_kluisdeur
+    3300012: group3_onderding
+    3300014: group3_pootje
+    3300016: group3_pootje1
+    3300018: group3_pootje2
+    3300020: group3_pootje3
+    3300022: group3_scharnier_group2
+    3300024: kluis_group3
+    4300000: group3_ding
+    4300002: group3_group2_scharnier1
+    4300004: group3_group4_handel1
+    4300006: group3_group4_handel2
+    4300008: group3_handel_group4
+    4300010: group3_kluisdeur
+    4300012: group3_onderding
+    4300014: group3_pootje
+    4300016: group3_pootje1
+    4300018: group3_pootje2
+    4300020: group3_pootje3
+    4300022: group3_scharnier_group2
+    4300024: kluis_group3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 8303624d445d29e47b132c9421f1be05
+timeCreated: 1491734003
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cart_1
+    100002: Cart_2
+    100004: Cart_3
+    100006: group1
+    100008: group2
+    100010: group3
+    100012: pasted__pCube1
+    100014: pasted__pCube2
+    100016: pCube10
+    100018: pCube11
+    100020: pCube5
+    100022: pCube6
+    100024: pCube7
+    100026: pCube9
+    100028: pCylinder1
+    100030: transform10
+    100032: transform11
+    100034: transform12
+    100036: transform13
+    100038: transform14
+    100040: transform15
+    100042: transform16
+    100044: transform17
+    100046: transform18
+    100048: transform21
+    100050: transform22
+    100052: transform23
+    100054: transform24
+    100056: transform25
+    100058: transform26
+    100060: transform27
+    100062: transform28
+    100064: transform29
+    100066: transform30
+    100068: transform31
+    100070: transform32
+    100072: //RootNode
+    100074: Wheels
+    100076: Wiel1
+    100078: Wiel10
+    100080: Wiel11
+    100082: Wiel12
+    100084: Wiel2
+    100086: Wiel3
+    100088: Wiel4
+    100090: Wiel5
+    100092: Wiel6
+    100094: Wiel7
+    100096: Wiel8
+    100098: Wiel9
+    400000: Cart_1
+    400002: Cart_2
+    400004: Cart_3
+    400006: group1
+    400008: group2
+    400010: group3
+    400012: pasted__pCube1
+    400014: pasted__pCube2
+    400016: pCube10
+    400018: pCube11
+    400020: pCube5
+    400022: pCube6
+    400024: pCube7
+    400026: pCube9
+    400028: pCylinder1
+    400030: transform10
+    400032: transform11
+    400034: transform12
+    400036: transform13
+    400038: transform14
+    400040: transform15
+    400042: transform16
+    400044: transform17
+    400046: transform18
+    400048: transform21
+    400050: transform22
+    400052: transform23
+    400054: transform24
+    400056: transform25
+    400058: transform26
+    400060: transform27
+    400062: transform28
+    400064: transform29
+    400066: transform30
+    400068: transform31
+    400070: transform32
+    400072: //RootNode
+    400074: Wheels
+    400076: Wiel1
+    400078: Wiel10
+    400080: Wiel11
+    400082: Wiel12
+    400084: Wiel2
+    400086: Wiel3
+    400088: Wiel4
+    400090: Wiel5
+    400092: Wiel6
+    400094: Wiel7
+    400096: Wiel8
+    400098: Wiel9
+    2300000: Cart_1
+    2300002: Cart_2
+    2300004: Cart_3
+    2300006: Wheels
+    3300000: Cart_1
+    3300002: Cart_2
+    3300004: Cart_3
+    3300006: Wheels
+    4300000: Cart_1
+    4300002: Cart_2
+    4300004: Cart_3
+    4300006: Wheels
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
