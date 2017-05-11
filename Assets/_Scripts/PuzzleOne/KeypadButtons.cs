@@ -97,50 +97,51 @@ public class KeypadButtons : MonoBehaviour
 		if (Input.GetButtonDown (Controller.Square))
 			code.text += currButton.ToString ();
 
-		var xAxis = Input.GetAxisRaw (Controller.RightStickY);
-		if (xAxis >= 0.5f && currButton != 0 && currButton != 9 && !hold)
+        var yAxis = Input.GetAxisRaw (Controller.RightStickY);
+        var xAxis = Input.GetAxisRaw (Controller.RightStickX);
+        if (yAxis >= 0.5f && currButton != 0 && currButton != 3 && currButton != 6 && currButton != 9 && !hold)
 		{
 			selectButton (currButton+1);
 			currButton++;
 			hold = true;
 		}
 
-		if (xAxis >= 0.5f && currButton == 9 && !hold)
-		{
-			selectButton (0);
-			currButton = 0;
-			hold = true;
-		}
+        if (yAxis <= -0.5f && currButton != 0 && currButton != 4 && currButton != 7 && currButton != 1 && !hold)
+        {
+            selectButton(currButton - 1);
+            currButton--;
+            hold = true;
+        }
 
-		if (xAxis <= -0.5f && currButton != 0 && currButton != 1 && !hold)
-		{
-			selectButton (currButton-1);
-			currButton--;
-			hold = true;
-		}
+        if (xAxis >= 0.5f && currButton != 7 && currButton != 8 && currButton != 9 && currButton != 0 && !hold)
+        {
+            selectButton(currButton + 3);
+            currButton += 3;
+            hold = true;
+        }
 
-		if (xAxis <= -0.5f && currButton == 1 && !hold)
-		{
-			selectButton (0);
-			currButton = 0;
-			hold = true;
-		}
+        if (xAxis >= 0.5f && currButton == 8 && !hold)
+        {
+            selectButton(0);
+            currButton = 0;
+            hold = true;
+        }
 
-		if (xAxis <= -0.5f && currButton == 0 && !hold)
-		{
-			selectButton (9);
-			currButton = 9;
-			hold = true;
-		}
+        if (xAxis <= -0.5f && currButton != 1 && currButton != 2 && currButton != 3 && currButton != 0 && !hold)
+        {
+            selectButton(currButton - 3);
+            currButton -= 3;
+            hold = true;
+        }
 
-		if (xAxis >= 0.5f && currButton == 0 && !hold)
-		{
-			selectButton (1);
-			currButton = 1;
-			hold = true;
-		}
+        if (xAxis <= -0.5f && currButton == 0 && !hold)
+        {
+            selectButton(8);
+            currButton = 8;
+            hold = true;
+        }
 
-		if (xAxis < 0.5f && xAxis > -0.5f)
+        if (yAxis < 0.5f && yAxis > -0.5f && xAxis < 0.5f && xAxis > -0.5f)
 			hold = false;
 	}
 }

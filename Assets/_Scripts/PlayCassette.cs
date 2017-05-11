@@ -94,15 +94,15 @@ public class PlayCassette : MonoBehaviour
     /// <returns>The tape.</returns>
     private IEnumerator playTape()
     {
-        var tapes = inventory.getAllItemsOfType (ItemType.cassette);
-        if (tapes == null)
+        var tape = inventory.getItem(ItemType.cassette, "Tape2");
+        if (tape == null)
             yield break;
 
-        if (this.audio.isPlaying(tapes[0].Name))
+        if (this.audio.isPlaying(tape.Name))
             yield break;
 
         this.audio.playSound("InsertTape");
         yield return new WaitForSeconds(insertSound.length);
-        this.audio.playSound (tapes[0].Name);
+        this.audio.playSound (tape.Name);
     }
 }

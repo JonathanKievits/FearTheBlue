@@ -21,7 +21,7 @@ public class RotateObject : MonoBehaviour
     /// Start this instance.
     /// </summary>
 	private void Start()
-	{
+    {
         angleZ = this.transform.localEulerAngles.z;
         angleY = this.transform.localEulerAngles.y;
 	}
@@ -31,9 +31,9 @@ public class RotateObject : MonoBehaviour
     /// </summary>
 	private void Update()
 	{
-		angleZ += Input.GetAxisRaw (Controller.RightStickX) * Time.deltaTime;
-		angleY += -Input.GetAxisRaw (Controller.RightStickY) * Time.deltaTime;
-		var direction = new Vector3 (this.transform.localEulerAngles.x, angleY*speed, angleZ*speed);
+        angleZ += Input.GetAxisRaw (Controller.RightStickX) * speed * Time.deltaTime;
+        angleY += -Input.GetAxisRaw (Controller.RightStickY) * speed * Time.deltaTime;
+		var direction = new Vector3 (this.transform.localEulerAngles.x, angleY, angleZ);
 		this.transform.localEulerAngles = direction;
 	}
 }
