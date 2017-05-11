@@ -23,6 +23,9 @@ public class Inventory : MonoBehaviour
     private void Start()
     {
         inventory = new Dictionary<ItemType,List<Item>>();
+        inventory.Add (ItemType.cassette, new List<Item> ());
+        inventory.Add (ItemType.key, new List<Item> ());
+        inventory.Add (ItemType.puzzleItem, new List<Item> ());
         audioManager = this.GetComponent<AudioManager>();
     }
 
@@ -32,9 +35,6 @@ public class Inventory : MonoBehaviour
     /// <param name="item">Item.</param>
 	public void AddItem (Item item)
 	{
-		if (!inventory.ContainsKey (item.Type))
-			inventory.Add (item.Type, new List<Item> ());
-        
         audioManager.playSound("Pickup");
 		inventory[item.Type].Add(item);
 		return;
@@ -46,10 +46,7 @@ public class Inventory : MonoBehaviour
     /// <param name="itemType">Item type.</param>
     /// <param name="itemName">Item name.</param>
 	public void removeItem(ItemType itemType, string itemName)
-	{
-		if (!inventory.ContainsKey (itemType))
-			return;
-		
+    {	
 		for (int i = 0; i < inventory [itemType].Count; i++)
 		{
 			if (inventory [itemType] [i].Name == itemName)
@@ -67,10 +64,7 @@ public class Inventory : MonoBehaviour
     /// <returns>The all items of type.</returns>
     /// <param name="type">Type.</param>
 	public List<Item> getAllItemsOfType(ItemType type)
-	{
-		if (!inventory.ContainsKey (type))
-			return null;
-		
+	{	
 		return inventory[type];
 	}
 
@@ -82,9 +76,6 @@ public class Inventory : MonoBehaviour
     /// <param name="name">Name.</param>
 	public Item getItem(ItemType type, string name)
 	{
-		if (!inventory.ContainsKey (type))
-			return null;
-
 		for (int i = 0; i < inventory [type].Count; i++)
 		{
 			if (inventory [type] [i].Name == name)
@@ -103,9 +94,6 @@ public class Inventory : MonoBehaviour
     /// <param name="index">Index.</param>
 	public Item getItem(ItemType type, int index)
 	{
-		if (!inventory.ContainsKey (type))
-			return null;
-
 		for (int i = 0; i < getAllItemsOfType (type).Count; i++)
 		{
 			if (inventory [type] [i].Name == name)
@@ -125,9 +113,6 @@ public class Inventory : MonoBehaviour
 	public int getAmountOfItems(ItemType type, string name)
 	{
 		var temp = 0;
-		if (!inventory.ContainsKey (type))
-			return temp;
-
 		for (int i = 0; i < inventory [type].Count; i++)
 		{
 			if (inventory [type] [i].Name == name)

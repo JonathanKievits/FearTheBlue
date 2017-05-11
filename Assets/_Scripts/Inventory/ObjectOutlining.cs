@@ -13,6 +13,12 @@ public class ObjectOutlining : MonoBehaviour
     /// The outline shader.
     /// </summary>
 	[SerializeField] private Shader outlineShader;
+    private Values values;
+
+    private void Start()
+    {
+        values = this.GetComponent<Values>();
+    }
 
     /// <summary>
     /// Outline the specified renderer with the given lineWidth and colour.
@@ -22,6 +28,8 @@ public class ObjectOutlining : MonoBehaviour
     /// <param name="colour">Colour.</param>
 	public void outline(Renderer renderer, float lineWidth, Color colour)
 	{
+        if (values.CurrentOS == OperationSystem.windows)
+            lineWidth = lineWidth * 40;
 		renderer.material.shader = outlineShader;
 		renderer.material.SetFloat ("_Outline", lineWidth);
 		renderer.material.SetColor ("_Colour", Color.white);

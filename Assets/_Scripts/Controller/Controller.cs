@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-public enum ControllerType { xbox, playstation };
-public enum Os { windows, mac };
 
 /// <summary>
 /// Holds information about the controller.
@@ -40,12 +38,12 @@ public class Controller
     private static string dpadY = "";
     public static string DpadY { get { return dpadY; } }
 
-    public static void setController(ControllerType controller, Os os)
+    public static void setController(ControllerType controller, OperationSystem os)
     {
         if (triangle != "")
             return;
 
-        if (os == Os.mac)
+        if (os == OperationSystem.mac)
         {
             if (controller == ControllerType.playstation)
             {
@@ -88,7 +86,7 @@ public class Controller
             }
         }
 
-        if (os == Os.windows)
+        if (os == OperationSystem.windows)
         {
             if (controller == ControllerType.playstation)
             {
