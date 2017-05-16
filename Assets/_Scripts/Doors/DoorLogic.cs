@@ -26,6 +26,9 @@ public class DoorLogic : MonoBehaviour
     /// </summary>
 	[SerializeField]private HingePosition hingePosition;
 
+    [SerializeField]private GameObject roomToTeleportTo;
+    [SerializeField]private GameObject originalRoom;
+
     /// <summary>
     /// If player is in range of the door.
     /// </summary>
@@ -147,6 +150,7 @@ public class DoorLogic : MonoBehaviour
 	private IEnumerator openDoor()
 	{
         this.isOpening = true;
+        roomToTeleportTo.SetActive(true);
         movement.enabled = look.enabled = false;
 		audioManager.playSound ("DoorOpens");
 		if (this.hingePosition == HingePosition.right) 
@@ -175,5 +179,6 @@ public class DoorLogic : MonoBehaviour
 		this.transform.localEulerAngles = this.originalRotation;
         this.isOpening = false;
         movement.enabled = look.enabled = true;
+        originalRoom.SetActive(false);
 	}
 }
