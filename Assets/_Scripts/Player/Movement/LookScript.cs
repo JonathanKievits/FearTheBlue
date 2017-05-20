@@ -30,7 +30,9 @@ public class LookScript : MonoBehaviour
 	{
 		var x = Input.GetAxisRaw (Controller.RightStickX);
 		var y = Input.GetAxisRaw (Controller.RightStickY);
-		this.transform.eulerAngles += new Vector3 (x, 0, 0).normalized * lookSpeed * Time.deltaTime;
+        this.transform.eulerAngles += new Vector3 (x, 0, 0).normalized * lookSpeed * Time.deltaTime;
+        this.transform.localPosition = new Vector3(this.transform.localPosition.x, 0.739f, this.transform.localPosition.z);
+
 		var angle = this.transform.eulerAngles.x;
 		angle = (angle > 180) ? angle - 360 : angle;
 		if (angle > maxRotate)

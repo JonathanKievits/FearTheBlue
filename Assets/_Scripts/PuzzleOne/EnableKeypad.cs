@@ -48,6 +48,9 @@ public class EnableKeypad : MonoBehaviour
 	{
 		if (Input.GetButtonDown (Controller.Cross))
 			selectKeypad ();
+        
+        if (Input.GetButtonDown(Controller.Circle))
+            cancelKeypad();
 	}
 
     /// <summary>
@@ -55,18 +58,28 @@ public class EnableKeypad : MonoBehaviour
     /// </summary>
 	private void selectKeypad()
 	{
-		if (!isSelected)
-		{
-			if (!range.inRange(this.transform.position, maxDistance))
-				return;
+        if (isSelected)
+            return;
+        
+		if (!range.inRange(this.transform.position, maxDistance))
+		    return;
 
-			manager.setState (puzzleID.keypad);
-			isSelected = true;
-			return;
-		}
-			
-		manager.exitState ();
-		isSelected = false;
+		manager.setState (puzzleID.keypad);
+		isSelected = true;
 		return;
 	}
+
+    private void cancelKeypad()
+    {
+        if (!isSelected)
+            return;
+        
+        manager.exitState ();
+        return;
+    }
+
+    public void disableKeypad()
+    {
+        isSelected = false;
+    }
 }

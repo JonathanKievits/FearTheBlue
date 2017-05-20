@@ -36,6 +36,11 @@ public class Audio
     /// </summary>
     [SerializeField]private bool playFromStart;
 
+    [Range(0,1)][SerializeField]private float spatialBlend;
+    [SerializeField]private float minDistance;
+    [SerializeField]private float maxDistance;
+    [SerializeField]private Transform soundPosition;
+
     /// <summary>
     /// The AdioSource.
     /// </summary>
@@ -55,6 +60,18 @@ public class Audio
 		this.source.pitch = this.pitch;
 		this.source.panStereo = this.panning;
 		this.source.loop = this.loop;
+        this.source.spatialBlend = this.spatialBlend;
+
+        if (this.spatialBlend > 0)
+        {
+            if (soundPosition == null)
+                soundPosition = this.source.transform;
+            this.source.minDistance = this.minDistance;
+            this.source.maxDistance = this.maxDistance;
+            this.source.rolloffMode = AudioRolloffMode.Linear;
+            this.source.transform.position = soundPosition.position;
+        }
+
         if (this.playFromStart)
             this.source.Play();
 	}

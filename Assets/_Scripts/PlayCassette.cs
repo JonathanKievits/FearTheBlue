@@ -96,13 +96,16 @@ public class PlayCassette : MonoBehaviour
     {
         var tape = inventory.getItem(ItemType.cassette, "Tape2");
         if (tape == null)
+        {
+            audio.playSound("EmptyCassette");
+            yield break;
+        }
+
+        if (audio.isPlaying(tape.Name))
             yield break;
 
-        if (this.audio.isPlaying(tape.Name))
-            yield break;
-
-        this.audio.playSound("InsertTape");
+        audio.playSound("InsertTape");
         yield return new WaitForSeconds(insertSound.length);
-        this.audio.playSound (tape.Name);
+        audio.playSound (tape.Name);
     }
 }

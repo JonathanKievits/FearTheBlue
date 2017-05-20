@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TeleportThroughDoor : MonoBehaviour 
 {
 	private GameObject player;
-	private SpriteRenderer darkView;
+	//private SpriteRenderer darkView;
+    [SerializeField]private Image darkView;
 
 	private void Start()
 	{
 		this.player = GameObject.FindGameObjectWithTag (Tags.player);
-		this.darkView = player.GetComponentInChildren<SpriteRenderer> ();
+        darkView.color = new Color (0, 0, 0, 0);
 	}
 
 	public void teleport(Transform newPosition)
@@ -24,6 +26,7 @@ public class TeleportThroughDoor : MonoBehaviour
 		{
 			var alpha = darkView.color.a + 0.1f;
 			darkView.color = new Color (0, 0, 0, alpha);
+            Canvas.ForceUpdateCanvases();
 			yield return new WaitForSeconds (0.05f);
 		}
 		player.transform.position = position;
@@ -31,6 +34,7 @@ public class TeleportThroughDoor : MonoBehaviour
 		{
 			var alpha = darkView.color.a - 0.1f;
 			darkView.color = new Color (0, 0, 0, alpha);
+            Canvas.ForceUpdateCanvases();
 			yield return new WaitForSeconds (0.05f);
 		}
 	}

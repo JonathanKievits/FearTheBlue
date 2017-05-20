@@ -97,8 +97,9 @@ public class KeypadPuzzle : PuzzleBase
     /// </summary>
 	public override void cancel ()
 	{
-		enableScripts (true);
 		buttons.stopButtons ();
+        keypad.disableKeypad();
+        enableScripts (true);
 	}
 
     /// <summary>

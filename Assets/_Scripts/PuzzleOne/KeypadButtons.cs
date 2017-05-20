@@ -94,7 +94,7 @@ public class KeypadButtons : MonoBehaviour
 		if (!start)
 			return;
 		
-		if (Input.GetButtonDown (Controller.Square))
+        if (Input.GetButtonDown (Controller.Cross))
 			code.text += currButton.ToString ();
 
         var yAxis = Input.GetAxisRaw (Controller.RightStickY);
