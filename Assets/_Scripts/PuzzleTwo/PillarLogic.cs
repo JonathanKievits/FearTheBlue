@@ -89,10 +89,10 @@ public class PillarLogic : MonoBehaviour
 			return;
 
 		manager.setState (puzzleID.rotate);
-		objectToRotate.gameObject.SetActive (true);
-		objectToRotate.enabled = true;
 		lookScript.enabled = false;
 		movementScript.enabled = false;
+        objectToRotate.gameObject.SetActive (true);
+        objectToRotate.enabled = true;
 		isEnabled = true;
 	}
 
