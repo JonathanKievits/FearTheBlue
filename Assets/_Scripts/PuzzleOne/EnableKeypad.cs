@@ -22,10 +22,6 @@ public class EnableKeypad : MonoBehaviour
     /// </summary>
 	private KeypadButtons buttons;
     /// <summary>
-    /// Reference to player transform
-    /// </summary>
-	private Transform player;
-    /// <summary>
     /// Boolean if the keypad is selected.
     /// </summary>
 	private bool isSelected;
@@ -36,7 +32,6 @@ public class EnableKeypad : MonoBehaviour
 	private void Start()
 	{
 		buttons = this.GetComponent<KeypadButtons> ();
-		player = GameObject.FindGameObjectWithTag (Tags.player).transform;
 		manager = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<PuzzleManager> ();
 		range = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<CheckDistance2Player> ();
 	}

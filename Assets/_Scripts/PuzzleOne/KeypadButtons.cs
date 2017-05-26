@@ -97,8 +97,8 @@ public class KeypadButtons : MonoBehaviour
         if (Input.GetButtonDown (Controller.Cross))
 			code.text += currButton.ToString ();
 
-        var yAxis = Input.GetAxisRaw (Controller.RightStickY);
-        var xAxis = Input.GetAxisRaw (Controller.RightStickX);
+        var yAxis = Input.GetAxisRaw (Controller.LeftStickX) * 100;
+        var xAxis = Input.GetAxisRaw (Controller.LeftStickY) * -100;
         if (yAxis >= 0.5f && currButton != 0 && currButton != 3 && currButton != 6 && currButton != 9 && !hold)
 		{
 			selectButton (currButton+1);

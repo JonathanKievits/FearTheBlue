@@ -28,6 +28,8 @@ public class Movement : MonoBehaviour
     /// </summary>
 	private AudioManager audioManager;
 
+    private float startY;
+
     /// <summary>
     /// Start this instance.
     /// </summary>
@@ -35,6 +37,7 @@ public class Movement : MonoBehaviour
 	{
 		rigid = GetComponent<Rigidbody> ();
 		audioManager = FindObjectOfType<AudioManager> ();
+        startY = this.transform.position.y;
 	}
 
     /// <summary>
@@ -60,7 +63,7 @@ public class Movement : MonoBehaviour
 
     private void normalMovement()
     {
-        Vector3 velocity = transform.TransformDirection(movement.normalized) *  speed * Time.fixedDeltaTime;
+        Vector3 velocity = transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
         rigid.MovePosition(rigid.transform.localPosition + velocity);
         var mag = Mathf.Abs(velocity.z*10);
         if (mag >= 0.01)
@@ -69,9 +72,9 @@ public class Movement : MonoBehaviour
 
     private void vrMovement()
     {
-        var orignalPos = new Vector3 (this.transform.position.x, 0, this.transform.position.z);
-        var velocity = movement.normalized * speed * Time.fixedDeltaTime;
-
+        Vector3 velocity = Camera.main.transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
+        velocity.y = 0;
+        rigid.MovePosition(rigid.transform.localPosition + velocity);
         var mag = Mathf.Abs(velocity.z*10);
         if (mag >= 0.01)
             audioManager.playSound ("Footstep1");
