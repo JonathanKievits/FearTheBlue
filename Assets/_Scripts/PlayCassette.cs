@@ -27,6 +27,8 @@ public class PlayCassette : MonoBehaviour
     /// Reference to audiomanager.
     /// </summary>
 	private AudioManager audio;
+    private int _emptyCassette;
+    private int _insertCassette;
     /// <summary>
     /// Reference to inventory.
     /// </summary>
@@ -57,6 +59,8 @@ public class PlayCassette : MonoBehaviour
 		this.inventory = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<Inventory>();
 		this.outlining = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<ObjectOutlining>();
 		this.audio = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<AudioManager>();
+        _emptyCassette = audio.audioToID("EmptyCassette");
+        _insertCassette = audio.audioToID("InsertTape");
 		this.renderer = this.GetComponent<Renderer> ();
 		if (this.renderer == null)
 			this.renderer = this.GetComponentInChildren<Renderer> ();
@@ -97,15 +101,15 @@ public class PlayCassette : MonoBehaviour
         var tape = inventory.getItem(ItemType.cassette, "Tape2");
         if (tape == null)
         {
-            audio.playSound("EmptyCassette");
+            audio.playSound(_emptyCassette);
             yield break;
         }
 
-        if (audio.isPlaying(tape.Name))
+        if (audio.isPlaying(audio.audioToID(tape.Name)))
             yield break;
 
-        audio.playSound("InsertTape");
+        audio.playSound(_insertCassette);
         yield return new WaitForSeconds(insertSound.length);
-        audio.playSound (tape.Name);
+        audio.playSound (audio.audioToID(tape.Name));
     }
 }

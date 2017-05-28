@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.VR;
 
 /// <summary>
 /// Looking behaviour.
@@ -21,6 +22,8 @@ public class LookScript : MonoBehaviour
 	private void Start()
 	{
 		player = this.transform.parent.gameObject;
+        if (VRDevice.isPresent)
+            this.enabled = false;
 	}
 
     /// <summary>
@@ -32,7 +35,7 @@ public class LookScript : MonoBehaviour
 		var y = Input.GetAxisRaw (Controller.RightStickY);
         this.transform.eulerAngles += new Vector3 (x, 0, 0).normalized * lookSpeed * Time.deltaTime;
         this.transform.localPosition = new Vector3(this.transform.localPosition.x, 0.739f, this.transform.localPosition.z);
-
+        
 		var angle = this.transform.eulerAngles.x;
 		angle = (angle > 180) ? angle - 360 : angle;
 		if (angle > maxRotate)

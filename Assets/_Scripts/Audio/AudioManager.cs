@@ -28,18 +28,18 @@ public class AudioManager : MonoBehaviour
     /// Play a sound.
     /// </summary>
     /// <param name="name">Name.</param>
-    public void playSound(string name)
+    public void playSound(int id)
     {
-        audioLoop (name).play ();
+        audioClips[id].play ();
     }
 
     /// <summary>
     /// Stop a sound.
     /// </summary>
     /// <param name="name">Name.</param>
-    public void stopSound(string name)
+    public void stopSound(int id)
     {
-        audioLoop (name).stop ();   
+        audioClips[id].stop ();   
     }
 
     /// <summary>
@@ -47,11 +47,12 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     /// <returns><c>true</c>, if clip is playing, <c>false</c> otherwise.</returns>
     /// <param name="name">Name.</param>
-    public bool isPlaying(string name)
+    public bool isPlaying(int id)
     {
-        return audioLoop (name).Source.isPlaying;
+        return audioClips[id].Source.isPlaying;
     }
 
+    /*
     /// <summary>
     /// Loops through all audio clips and returns the desired clip
     /// </summary>
@@ -67,5 +68,16 @@ public class AudioManager : MonoBehaviour
             }
         }
         return null;
+    }
+    */
+
+    public int audioToID(string name)
+    {
+        for (var i = 0; i < audioClips.Length; i++)
+        {
+            if (audioClips [i].Name == name)
+                return i;
+        }
+        return 99999999;
     }
 }

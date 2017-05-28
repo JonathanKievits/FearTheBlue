@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 using UnityEngine;
-using UnityEngine.VR;
 
 [RequireComponent(typeof(Rigidbody))]
 /// <summary>
@@ -27,6 +26,7 @@ public class Movement : MonoBehaviour
     /// Reference to the Audiomanager.
     /// </summary>
 	private AudioManager audioManager;
+    private int _footstep;
 
     private float startY;
 
@@ -37,6 +37,7 @@ public class Movement : MonoBehaviour
 	{
 		rigid = GetComponent<Rigidbody> ();
 		audioManager = FindObjectOfType<AudioManager> ();
+        _footstep = audioManager.audioToID("Footstep1");
         startY = this.transform.position.y;
 	}
 
@@ -55,28 +56,16 @@ public class Movement : MonoBehaviour
     /// </summary>
 	private void FixedUpdate()
 	{
-        if (VRDevice.isPresent)
-            vrMovement();
-        else
-            normalMovement();
+        walk();
 	}
 
-    private void normalMovement()
-    {
-        Vector3 velocity = transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
-        rigid.MovePosition(rigid.transform.localPosition + velocity);
-        var mag = Mathf.Abs(velocity.z*10);
-        if (mag >= 0.01)
-            audioManager.playSound ("Footstep1");
-    }
-
-    private void vrMovement()
+    private void walk()
     {
         Vector3 velocity = Camera.main.transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
         velocity.y = 0;
         rigid.MovePosition(rigid.transform.localPosition + velocity);
         var mag = Mathf.Abs(velocity.z*10);
         if (mag >= 0.01)
-            audioManager.playSound ("Footstep1");
+            audioManager.playSound (_footstep);
     }
 }

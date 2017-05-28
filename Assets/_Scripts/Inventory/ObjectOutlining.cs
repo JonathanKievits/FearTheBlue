@@ -14,10 +14,16 @@ public class ObjectOutlining : MonoBehaviour
     /// </summary>
 	[SerializeField] private Shader outlineShader;
     private Values values;
+    private int outlineWidth;
+    private int normalColour;
+    private int outlineColour;
 
     private void Start()
     {
         values = this.GetComponent<Values>();
+        outlineWidth = Shader.PropertyToID("_Outline");
+        normalColour = Shader.PropertyToID("_Colour");
+        outlineColour = Shader.PropertyToID("_OutlineColour");
     }
 
     /// <summary>
@@ -30,10 +36,11 @@ public class ObjectOutlining : MonoBehaviour
 	{
         if (values.CurrentOS == OperationSystem.windows)
             lineWidth = lineWidth * 40;
+        
 		renderer.material.shader = outlineShader;
-		renderer.material.SetFloat ("_Outline", lineWidth);
-		renderer.material.SetColor ("_Colour", Color.white);
-		renderer.material.SetColor ("_OutlineColour", colour);
+        renderer.material.SetFloat (outlineWidth, lineWidth);
+        renderer.material.SetColor (normalColour, Color.white);
+        renderer.material.SetColor (outlineColour, colour);
 	}
 
     /// <summary>

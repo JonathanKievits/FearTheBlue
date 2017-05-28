@@ -72,6 +72,9 @@ public class DoorLogic : MonoBehaviour
     /// <summary>
     /// Reference to TeleportThroughDoor script.
     /// </summary>
+    private int _doorNeedsKey; 
+    private int _doorOpens;
+    private int _doorCloses;
 	private TeleportThroughDoor teleport;
 
     /// <summary>
@@ -93,6 +96,10 @@ public class DoorLogic : MonoBehaviour
         this.look = player.GetComponentInChildren<LookScript>();
 		this.inventory = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<Inventory> ();
 		this.audioManager = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<AudioManager> ();
+        _doorNeedsKey = audioManager.audioToID("DoorNeedsKey");
+        _doorOpens = audioManager.audioToID("DoorOpens");
+        _doorCloses = audioManager.audioToID("DoorCloses");
+
 		this.teleport = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<TeleportThroughDoor> ();
 	}
 
@@ -132,7 +139,7 @@ public class DoorLogic : MonoBehaviour
 		{
 			if (this.needsKey && inventory.getItem (ItemType.key, keyName) == null) 
 			{
-				audioManager.playSound ("DoorNeedsKey");
+                audioManager.playSound (_doorNeedsKey);
 				return;
 			}
 			
@@ -152,7 +159,7 @@ public class DoorLogic : MonoBehaviour
         this.isOpening = true;
         roomToTeleportTo.SetActive(true);
         movement.enabled = look.enabled = false;
-		audioManager.playSound ("DoorOpens");
+        audioManager.playSound (_doorOpens);
 		if (this.hingePosition == HingePosition.right) 
 		{
 			while (Mathf.Abs (this.transform.localEulerAngles.y) > maxRotate) 
@@ -174,7 +181,7 @@ public class DoorLogic : MonoBehaviour
 
 		teleport.teleport (newPosition);
 		yield return new WaitForSeconds (1f);
-        audioManager.playSound ("DoorCloses");
+        audioManager.playSound (_doorCloses);
 		this.transform.localPosition = this.originalPosition;
 		this.transform.localEulerAngles = this.originalRotation;
         this.isOpening = false;

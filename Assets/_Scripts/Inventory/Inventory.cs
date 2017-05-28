@@ -16,6 +16,7 @@ public class Inventory : MonoBehaviour
     /// Reference to the Audiomanager.
     /// </summary>
     private AudioManager audioManager;
+    private int _pickup;
 
     /// <summary>
     /// Start this instance.
@@ -27,6 +28,7 @@ public class Inventory : MonoBehaviour
         inventory.Add (ItemType.key, new List<Item> ());
         inventory.Add (ItemType.puzzleItem, new List<Item> ());
         audioManager = this.GetComponent<AudioManager>();
+        _pickup = audioManager.audioToID("Pickup");
     }
 
     /// <summary>
@@ -35,7 +37,7 @@ public class Inventory : MonoBehaviour
     /// <param name="item">Item.</param>
 	public void AddItem (Item item)
 	{
-        audioManager.playSound("Pickup");
+        audioManager.playSound(_pickup);
 		inventory[item.Type].Add(item);
 		return;
 	}

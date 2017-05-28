@@ -21,6 +21,7 @@ public class KeypadPuzzle : PuzzleBase
     /// Reference to AudioManager class.
     /// </summary>
     private AudioManager audioManager;
+    private int _keypadSolve;
     /// <summary>
     /// Reference to KeypadButtons class.
     /// </summary>
@@ -59,6 +60,7 @@ public class KeypadPuzzle : PuzzleBase
 		this.look = GameObject.FindGameObjectWithTag (Tags.player).GetComponentInChildren<LookScript> ();
 		this.inventory = GameObject.FindGameObjectWithTag (Tags.gameController).GetComponent<Inventory> ();
         this.audioManager = GameObject.FindGameObjectWithTag(Tags.gameController).GetComponent<AudioManager>();
+        _keypadSolve = audioManager.audioToID("KeypadSolve");
 	}
 
     /// <summary>
@@ -86,7 +88,7 @@ public class KeypadPuzzle : PuzzleBase
 	{
 		buttons.stopButtons ();
 		enableScripts (true);
-        audioManager.playSound("KeypadSolve");
+        audioManager.playSound(_keypadSolve);
 		inventory.AddItem (key);
         keypad.enabled = false;
 		manager.exitState ();
