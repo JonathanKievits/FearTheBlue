@@ -4,17 +4,13 @@ using UnityEditor;
 [CustomEditor(typeof(Pickup), true)]
 public class PickupEditor : Editor 
 {
+    /*
 	private Pickup pickup;
 	private int labelWidth;
-	private float minOutline, maxOutline, minDistance, maxDistance;
 	private void OnEnable()
 	{
 		pickup = (Pickup)target;
 		labelWidth = 120;
-		minOutline = 0;
-		maxOutline = 0.5f;
-		minDistance = 0;
-		maxDistance = 5;
 	}
 
 	public override void OnInspectorGUI()
@@ -39,13 +35,14 @@ public class PickupEditor : Editor
 
 		GUILayout.BeginHorizontal ();
 		GUILayout.Label ("Outline width: ", GUILayout.Width(labelWidth));
-		pickup.OutlineWidth = EditorGUILayout.Slider (pickup.OutlineWidth, minOutline, maxOutline);
+		pickup.OutlineWidth = EditorGUILayout.Slider (pickup.OutlineWidth, 0, 1);
 		GUILayout.EndHorizontal ();
 
 		GUILayout.BeginHorizontal ();
 		GUILayout.Label ("Max pickup distance: ", GUILayout.Width(labelWidth));
-		pickup.MaxDistance = EditorGUILayout.Slider (pickup.MaxDistance, minDistance, maxDistance);
+		pickup.MaxDistance = EditorGUILayout.Slider (pickup.MaxDistance, 0, 10);
 		GUILayout.EndHorizontal ();
 		GUILayout.EndVertical ();
 	}
+ */   
 }

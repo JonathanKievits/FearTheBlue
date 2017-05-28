@@ -64,8 +64,10 @@ public class Movement : MonoBehaviour
         Vector3 velocity = Camera.main.transform.TransformDirection(movement.normalized) * speed * Time.fixedDeltaTime;
         velocity.y = 0;
         rigid.MovePosition(rigid.transform.localPosition + velocity);
-        var mag = Mathf.Abs(velocity.z*10);
-        if (mag >= 0.01)
-            audioManager.playSound (_footstep);
+        var mag = Mathf.Abs(movement.z);
+        if (mag >= 0.001)
+            audioManager.playSound(_footstep);
+        else
+            audioManager.stopSound(_footstep);
     }
 }

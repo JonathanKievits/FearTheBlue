@@ -3,32 +3,33 @@
 /// <summary>
 /// Pickup logic.
 /// </summary>
+[System.Serializable]
 public class Pickup : MonoBehaviour
 {
     /// <summary>
     /// Name of the item.
     /// </summary>
-	[SerializeField]private string name;
+    [SerializeField]private string name;
 	public string Name{get{return name;} set{name = value;}}
     /// <summary>
     /// Type of the item.
     /// </summary>
-	[SerializeField]private ItemType type;
+    [SerializeField]private ItemType type;
 	public ItemType Type{get{return type;}set{type = value;}}
     /// <summary>
     /// The outline colour.
     /// </summary>
-	[SerializeField]private Color outlineColour;
+    [SerializeField]private Color outlineColour;
 	public Color OutlineColour{get{return outlineColour;}set{outlineColour = value;}}
     /// <summary>
     /// The width of the outline.
     /// </summary>
-	[Range(0,0.5f)][SerializeField]private float outlineWidth;
+    [SerializeField]private float outlineWidth;
 	public float OutlineWidth{get{return outlineWidth;}set{outlineWidth = value;}}
     /// <summary>
     /// The max distance to the player.
     /// </summary>
-	[Range(1,5)][SerializeField]private float maxDistance;
+    [SerializeField]private float maxDistance;
 	public float MaxDistance{get{return maxDistance;}set{maxDistance = value;}}
 
     /// <summary>
