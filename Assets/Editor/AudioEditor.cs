@@ -4,7 +4,6 @@ using UnityEditor;
 [CustomEditor(typeof(AudioManager), false)]
 public class AudioEditor : Editor 
 {
-    /*
     private AudioManager audioManager;
     private float labelWidth;
 
@@ -92,5 +91,4 @@ public class AudioEditor : Editor
     {
         audioManager.AudioClips.Add(new Audio());
     }
-    */
 }

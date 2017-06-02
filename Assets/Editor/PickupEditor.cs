@@ -4,7 +4,6 @@ using UnityEditor;
 [CustomEditor(typeof(Pickup), true)]
 public class PickupEditor : Editor 
 {
-    /*
 	private Pickup pickup;
 	private int labelWidth;
 	private void OnEnable()
@@ -43,6 +42,5 @@ public class PickupEditor : Editor
 		pickup.MaxDistance = EditorGUILayout.Slider (pickup.MaxDistance, 0, 10);
 		GUILayout.EndHorizontal ();
 		GUILayout.EndVertical ();
-	}
- */   
+	} 
 }

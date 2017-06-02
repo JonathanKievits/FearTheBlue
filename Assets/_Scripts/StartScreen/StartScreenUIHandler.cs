@@ -6,6 +6,7 @@ public class StartScreenUIHandler : MonoBehaviour
 {
     [SerializeField]private Button[] buttons;
     [SerializeField]private EventSystem eventSystem;
+    [SerializeField]private StandaloneInputModule inputModule;
 
     private LoadScene loadScene;
     private StartScreenPanelHandler panelHandler;
@@ -14,8 +15,16 @@ public class StartScreenUIHandler : MonoBehaviour
     {
         loadScene = this.GetComponent<LoadScene>();
         panelHandler = this.GetComponent<StartScreenPanelHandler>();
+        setInput();
         setListeners();
+    }
 
+    private void setInput()
+    {
+        inputModule.horizontalAxis = Controller.LeftStickX;
+        inputModule.verticalAxis = Controller.LeftStickY;
+        inputModule.submitButton = Controller.Cross;
+        inputModule.cancelButton = Controller.Circle;
     }
 
     private void Update()

@@ -3,7 +3,7 @@
 /// <summary>
 /// Pickup logic.
 /// </summary>
-[System.Serializable]
+//[System.Serializable]
 public class Pickup : MonoBehaviour
 {
     /// <summary>

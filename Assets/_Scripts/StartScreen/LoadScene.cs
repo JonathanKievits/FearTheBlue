@@ -40,7 +40,6 @@ public class LoadScene : MonoBehaviour
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneIndex);
         while (!loading.isDone)
         {
-            //var percentage = Mathf.Floor((loading.progress * 100) / 0.9f);
             uiHandler.updateUI(loading.progress);
             yield return null;
         }

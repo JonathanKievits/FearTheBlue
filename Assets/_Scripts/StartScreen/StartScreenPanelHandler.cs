@@ -16,6 +16,9 @@ public class StartScreenPanelHandler : MonoBehaviour
 
     public void showPanel(int index, bool value)
     {
+        if (panels[index].activeInHierarchy == value)
+            return;
+        
         if (index > panels.Length - 1)
             return;
         

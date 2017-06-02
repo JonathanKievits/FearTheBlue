@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class QualityUI : MonoBehaviour 
 {
@@ -16,8 +17,9 @@ public class QualityUI : MonoBehaviour
     /*Other*/
     [SerializeField]private Dropdown vSyncCount;
     [SerializeField]private Dropdown profiles;
-
     [SerializeField]private Button back;
+
+    private List<Sprite> sprites = new List<Sprite>();
 
     private QualityLogic logic;
     private StartScreenPanelHandler panelHandler;
@@ -36,7 +38,6 @@ public class QualityUI : MonoBehaviour
         this.textureQuality.onValueChanged.AddListener(delegate{logic.setTextureQuality(this.textureQuality.value);});
         this.antiAliasing.onValueChanged.AddListener(delegate{logic.setAliasingLevel(this.antiAliasing.value);});
 
-
         this.shadowResolution.onValueChanged.AddListener(delegate{logic.setShadowResolution(this.shadowResolution.value);});
         this.shadowCascades.onValueChanged.AddListener(delegate {logic.setShadowCascades(this.shadowCascades.value);});
         this.shadows.onValueChanged.AddListener(delegate{logic.setShadow(this.shadows.value);});
@@ -51,12 +52,12 @@ public class QualityUI : MonoBehaviour
         */
         this.profiles.onValueChanged.AddListener(delegate{logic.setProfile(this.profiles.value); updateValues();});
         this.vSyncCount.onValueChanged.AddListener(delegate{logic.setVSyncCount(this.vSyncCount.value);});
-        this.back.onClick.AddListener(delegate() {panelHandler.showPanel(0, true);});
+        this.back.onClick.AddListener(delegate(){hideOptions();});
     }
 
-    public void selectFirst()
+    private void hideOptions()
     {
-        profiles.Select();
+        panelHandler.showPanel(0, true);
     }
 
     public void updateValues()
