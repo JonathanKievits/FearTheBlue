@@ -1,46 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(LoadUIHandler))]
-/// <summary>
-/// Load scene.
-/// </summary>
 public class LoadScene : MonoBehaviour 
 {
-    /// <summary>
-    /// Reference to LoadUIHandler class.
-    /// </summary>
-    private LoadUIHandler uiHandler;
+    //Delegate that is called while loading
+    public Action<float> OnProgress;
 
-    /// <summary>
-    /// Start this instance.
-    /// </summary>
-    private void Start()
-    {
-        uiHandler = this.GetComponent<LoadUIHandler>();
-    }
-
-    /// <summary>
-    /// Loads the scene.
-    /// </summary>
-    /// <param name="sceneIndex">Scene index.</param>
+    //Call this function with the scene index to load
     public void loadScene(int sceneIndex)
     {
         StartCoroutine(load(sceneIndex));
     }
-
-    /// <summary>
-    /// Load the specified sceneIndex.
-    /// </summary>
-    /// <param name="sceneIndex">Scene index.</param>
+        
     private IEnumerator load(int sceneIndex)
     {
+        //Loads the scene
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneIndex);
+        //Calls any connected functions while loading
         while (!loading.isDone)
         {
-            uiHandler.updateUI(loading.progress);
+            if (OnProgress != null)
+                OnProgress(loading.progress);
             yield return null;
         }
     }

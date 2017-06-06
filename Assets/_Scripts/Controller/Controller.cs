@@ -84,6 +84,16 @@ public class Controller
                 rightThumb = "xboxRightThumbMac";
                 return;
             }
+
+            if (controller == ControllerType.none)
+            {
+                leftStickX = "Horizontal";
+                leftStickY = "Vertical";
+                cross = "Use";
+                circle = "Cancel";
+                rightStickY = "MouseLookY";
+                rightStickX = "MouseLookX";
+            }
         }
 
         if (os == OperationSystem.windows)

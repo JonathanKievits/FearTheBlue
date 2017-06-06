@@ -1,33 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-/// <summary>
-/// Load user interface handler.
-/// </summary>
+
 public class LoadUIHandler : MonoBehaviour 
 {
-    /// <summary>
-    /// The loading text.
-    /// </summary>
+    //Text object that shows the percentage
     [SerializeField]private Text loadingText;
-    /// <summary>
-    /// Reference to LoadScene;
-    /// </summary>
+    //reference to the LoadScene script
     private LoadScene loadScene;
 
-    /// <summary>
-    /// Start this instance.
-    /// </summary>
     private void Start()
     {
         loadScene = this.GetComponent<LoadScene>();
+        //Let's the load script know we want to know when it's loading
+        loadScene.OnProgress += updateUI;
     }
-
-    /// <summary>
-    /// Updates the UI.
-    /// </summary>
-    public void updateUI(float percentage)
+        
+    private void updateUI(float percentage)
     {
+        //make sure it will be a number from 0 to a 100
         var edited = Mathf.Floor((percentage * 100) / 0.9f);
+        //Set the text value
         loadingText.text = "Loading: " + edited + "%";
     }
 }

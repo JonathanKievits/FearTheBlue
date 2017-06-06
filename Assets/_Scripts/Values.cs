@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public enum OperationSystem{windows, mac}
-public enum ControllerType {xbox, playstation};
+public enum ControllerType {xbox, playstation, none};
 
 public class Values : MonoBehaviour
 {
@@ -33,20 +33,28 @@ public class Values : MonoBehaviour
         {
             if (joystick.Contains("sony"))
                 controllerType = ControllerType.playstation;
-
-            if (joystick.Contains("microsoft"))
+            else if (joystick.Contains("microsoft"))
                 controllerType = ControllerType.xbox;
+            else
+                controllerType = ControllerType.none;
         }
 
         if (operatingSystem == OperationSystem.windows)
         {
             if (joystick.Contains("wireless controller") || joystick.Contains("sony"))
                 controllerType = ControllerType.playstation;
-
-            if (joystick.Contains("xbox"))
+            else if (joystick.Contains("xbox"))
                 controllerType = ControllerType.xbox;
+            else
+                controllerType = ControllerType.none;
         }
 
         Controller.setController(controllerType, operatingSystem);
+    }
+
+    private void Update()
+    {/*
+        if (Input.GetButtonDown(Controller.Cross))
+            print("go");*/
     }
 }

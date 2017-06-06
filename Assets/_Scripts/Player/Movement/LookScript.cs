@@ -21,6 +21,8 @@ public class LookScript : MonoBehaviour
     /// </summary>
 	private void Start()
 	{
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 		player = this.transform.parent.gameObject;
         if (VRDevice.isPresent)
             this.enabled = false;
