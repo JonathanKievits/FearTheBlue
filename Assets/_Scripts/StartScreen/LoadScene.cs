@@ -17,6 +17,9 @@ public class LoadScene : MonoBehaviour
         
     private IEnumerator load(int sceneIndex)
     {
+        if (OnProgress != null)
+            OnProgress(0);
+        
         //Loads the scene
         AsyncOperation loading = SceneManager.LoadSceneAsync(sceneIndex);
         //Calls any connected functions while loading
